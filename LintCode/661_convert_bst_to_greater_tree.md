@@ -1,10 +1,10 @@
-# <center>538 - Convert BST to Greater Tree</center> 
+# <center>661 - Convert BST to Greater Tree</center> 
 
 
 * Tag: BFS, BST, Recursion
 * Company: Amazon
 
-https://leetcode.com/problems/convert-bst-to-greater-tree/
+https://www.lintcode.com/problem/convert-bst-to-greater-tree/description
 
 <br></br>
 

@@ -4,4 +4,8 @@
 
 
 * [LeetCode]()
-    *[538 - Convert BST to Greater Tree](LeetCode/538_Convert_BST_to_Greater_Tree.md)
+    * [538 - Convert BST to Greater Tree](LeetCode/538_convert_bst_to_greater_tree.md)
+
+
+* [LintCode]()
+    * [661 - Convert BST to Greater Tree](LintCode/661_convert_bst_to_greater_tree.md)
