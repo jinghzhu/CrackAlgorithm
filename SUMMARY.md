@@ -4,6 +4,7 @@
 
 
 * [LeetCode]()
+    * [168 - Excel Sheet Column Title](LeetCode/168_excel_sheet_column_title.md)
     * [344 - Reverse String](LeetCode/344_reverse_string.md)
     * [437 - Path Sum III](LeetCode/437_path_sum_3.md)
     * [538 - Convert BST to Greater Tree](LeetCode/538_convert_bst_to_greater_tree.md)
@@ -16,3 +17,4 @@
     * [1165 - Subtree of Another Tree](LintCode/1165_is_subtree.md)
     * [1181 - Diameter of Binary Tree](LintCode/1181_diameter.md)
     * [1283- Reverse String](LintCode/1283_reverse_string.md)
+    * [1350 - Excel Sheet Column Title](LintCode/1350_excel_sheet_column_title.md)
