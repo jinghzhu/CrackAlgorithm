@@ -4,6 +4,7 @@
 
 
 * [LeetCode]()
+    * [9 - Palindrome Number](LeetCode/9_palindrome_num.md)
     * [168 - Excel Sheet Column Title](LeetCode/168_excel_sheet_column_title.md)
     * [344 - Reverse String](LeetCode/344_reverse_string.md)
     * [437 - Path Sum III](LeetCode/437_path_sum_3.md)
@@ -13,6 +14,7 @@
 
 
 * [LintCode]()
+    * [491 - Palindrome Number](LintCode/491_palindrome_num.md)
     * [661 - Convert BST to Greater Tree](LintCode/661_convert_bst_to_greater_tree.md)
     * [1165 - Subtree of Another Tree](LintCode/1165_is_subtree.md)
     * [1181 - Diameter of Binary Tree](LintCode/1181_diameter.md)
