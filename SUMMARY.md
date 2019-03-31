@@ -13,6 +13,7 @@
     * [538 - Convert BST to Greater Tree](LeetCode/538_convert_bst_to_greater_tree.md)
     * [543 - Diameter of Binary Tree](LeetCode/543_diameter.md)
     * [572 - Subtree of Another Tree](LeetCode/572_is_subtree.md)
+    * [824 - Goat Latin](LeetCode/824_goat_latin.md)
 
 
 * [LintCode]()
@@ -26,3 +27,4 @@
     * [1181 - Diameter of Binary Tree](LintCode/1181_diameter.md)
     * [1283- Reverse String](LintCode/1283_reverse_string.md)
     * [1350 - Excel Sheet Column Title](LintCode/1350_excel_sheet_column_title.md)
+    * [1394 - Goat Latin](LintCode/1394_goat_latin.md)
