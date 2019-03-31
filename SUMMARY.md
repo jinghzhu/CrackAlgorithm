@@ -21,6 +21,7 @@
     * [491 - Palindrome Number](LintCode/491_palindrome_num.md)
     * [661 - Convert BST to Greater Tree](LintCode/661_convert_bst_to_greater_tree.md)
     * [914 - Flip Game](LintCode/914_flip_game.md)
+    * [1104 - Judge Route Circle](LintCode/1104_judge_route_circle.md)
     * [1165 - Subtree of Another Tree](LintCode/1165_is_subtree.md)
     * [1181 - Diameter of Binary Tree](LintCode/1181_diameter.md)
     * [1283- Reverse String](LintCode/1283_reverse_string.md)
