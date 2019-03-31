@@ -32,29 +32,30 @@ Given a string, find the first non-repeating character in it and return it's ind
 ----
 ### Java
 ```java
-class Solution {
-    public String toGoatLatin(String S) {
-        String[] words = S.split(" ");
-        
-        for(int i = 0; i < words.length; i++) {
-            // Apply rule 1 and 2
-            String wordLower = words[i].toLowerCase();
-            char first = wordLower.charAt(0);
-            if("aeiou".indexOf(first) < 0) // not a vowel
-                words[i] = words[i].substring(1) + words[i].charAt(0) + "ma";
-            else // is vowel
-                words[i] = words[i] + "ma";
+public class Solution {
+    /**
+     * @param s: a string
+     * @return: it's index
+     */
+    public int firstUniqChar(String s) {
+        if (s == null)
+            return -1;
             
-            // Apply rule 3
-            int index = i + 1;
-            String as = "";
-            for(int j = 0; j < index; j++)
-                as = as + "a";
-                
-            words[i] = words[i] + as;
+        HashMap<Character, Integer> cache = new HashMap<Character, Integer>();
+        char[] charArr = s.toCharArray();
+        for (char ch : charArr) {
+            if (!cache.containsKey(ch)) {
+                cache.put(ch, 1);
+                continue;
+            }
+            int count = cache.get(ch);
+            cache.put(ch, count + 1);
         }
+        for (int i = 0; i < charArr.length; i++)
+            if (cache.get(charArr[i]) == 1)
+                return i;
         
-        return String.join(" ", words);
+        return -1;
     }
 }
 ```
