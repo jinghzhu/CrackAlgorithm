@@ -168,5 +168,4 @@ class lcpDictNode {
 		this.count = c;
 		this.children = new HashMap<Character, lcpDictNode>();
 	}
-
 ```

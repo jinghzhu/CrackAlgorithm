@@ -6,6 +6,7 @@
 * [LeetCode]()
     * [9 - Palindrome Number](LeetCode/9_palindrome_num.md)
     * [14 - Longest Common Prefix](LeetCode/14_longest_common_prefix.md)
+    * [22 - strStr](LeetCode/22_strstr.md)
     * [58 - Length of Last Word](LeetCode/58_len_last_word.md)
     * [67 - Add Binary](LeetCode/67_add_binary.md)
     * [168 - Excel Sheet Column Title](LeetCode/168_excel_sheet_column_title.md)
@@ -19,6 +20,7 @@
 
 
 * [LintCode]()
+    * [13 - strStr](LintCode/13_strstr.md)
     * [78 - Longest Common Prefix](LintCode/78_longest_common_prefix.md)
     * [408 - Add Binary](LintCode/408_add_binary.md)
     * [422 - Length of Last Word](LintCode/422_len_last_word.md)
