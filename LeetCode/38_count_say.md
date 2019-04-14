@@ -2,7 +2,7 @@
 
 
 * Tag: String
-* Company: acebook
+* Company: Facebook
 
 https://leetcode.com/problems/count-and-say/
 
