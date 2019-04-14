@@ -21,6 +21,7 @@
     * [543 - Diameter of Binary Tree](LeetCode/543_diameter.md)
     * [572 - Subtree of Another Tree](LeetCode/572_is_subtree.md)
     * [824 - Goat Latin](LeetCode/824_goat_latin.md)
+    * [859 - Buddy String](LeetCode/859_buddy_string.md)
 
 
 * [LintCode]()
@@ -42,3 +43,4 @@
     * [1283 - Reverse String](LintCode/1283_reverse_string.md)
     * [1350 - Excel Sheet Column Title](LintCode/1350_excel_sheet_column_title.md)
     * [1394 - Goat Latin](LintCode/1394_goat_latin.md)
+    * [1510 - Buddy String](LintCode/1510_buddy_string.md)
