@@ -20,6 +20,7 @@
     * [538 - Convert BST to Greater Tree](LeetCode/538_convert_bst_to_greater_tree.md)
     * [543 - Diameter of Binary Tree](LeetCode/543_diameter.md)
     * [572 - Subtree of Another Tree](LeetCode/572_is_subtree.md)
+    * [647 - Palindromic Substrings](LeetCode/647_palindromic_substrings.md)
     * [824 - Goat Latin](LeetCode/824_goat_latin.md)
     * [859 - Buddy String](LeetCode/859_buddy_string.md)
 
@@ -36,6 +37,7 @@
     * [637 - Valid Word Abbreviation](LintCode/637_is_abbrevation.md)
     * [646 - First Position Unique Character](LintCode/646_first_pos_unique_char.md)
     * [661 - Convert BST to Greater Tree](LintCode/661_convert_bst_to_greater_tree.md)
+    * [837 - Palindromic Substrings](LintCode/837_palindromic_substrings.md)
     * [914 - Flip Game](LintCode/914_flip_game.md)
     * [1104 - Judge Route Circle](LintCode/1104_judge_route_circle.md)
     * [1165 - Subtree of Another Tree](LintCode/1165_is_subtree.md)
