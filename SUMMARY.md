@@ -44,6 +44,7 @@
     * [646 - First Position Unique Character](LintCode/646_first_pos_unique_char.md)
     * [661 - Convert BST to Greater Tree](LintCode/661_convert_bst_to_greater_tree.md)
     * [702 - Concatenated String with Uncommon Characters of Two Strings (E)](LintCode/702_concate_uncommond_chars.md)
+    * [720 - Rearrange a String With Integers (E)](LintCode/720_rearrange_str.md)
     * [837 - Palindromic Substrings](LintCode/837_palindromic_substrings.md)
     * [914 - Flip Game](LintCode/914_flip_game.md)
     * [1104 - Judge Route Circle](LintCode/1104_judge_route_circle.md)
