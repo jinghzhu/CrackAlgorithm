@@ -46,7 +46,7 @@ public class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
         if (ransomNote == null)
             return true;
-        if((ransomNote != null && magazine == null) || ransomNote.length() < magazine.length())
+        if((ransomNote != null && magazine == null) || ransomNote.length() > magazine.length())
             return false;
         
         char[] chArr1 = ransomNote.toCharArray();
