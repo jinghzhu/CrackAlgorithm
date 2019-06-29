@@ -37,6 +37,7 @@
     * [696 - Count Binary Substrings (E)](LeetCode/696_count_binary_substr.md)
     * [709 - To Lower Case (E)](LeetCode/709_to_lower.md)
     * [824 - Goat Latin](LeetCode/824_goat_latin.md)
+    * [832 - Flipping an Image (E)](LeetCode/832_flip_image.md)
     * [859 - Buddy String](LeetCode/859_buddy_string.md)
 
 
