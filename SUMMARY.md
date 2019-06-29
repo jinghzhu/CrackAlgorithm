@@ -24,6 +24,7 @@
     * [389 - Find the Difference (E)](LeetCode/389_is_subsequence.md)
     * [392 - Is Subsequence (M)](LeetCode/392_is_subsequence.md)
     * [408 - Valid Word Abbreviation](LeetCode/408_is_abbrevation.md)
+    * [414 - Third Maximum Number (E)](LeetCode/414_3rd_max_num.md)
     * [437 - Path Sum III](LeetCode/437_path_sum_3.md)
     * [443 - String Compression](LeetCode/443_str_compress.md)
     * [459 - Repeated Substring Pattern (E)](LeetCode/459_repeated_substr.md)
