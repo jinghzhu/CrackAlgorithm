@@ -4,7 +4,7 @@
 
 <br></br>
 
-* Tag: Array
+* Tag: Array, Two Pointers
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Difficulty: Easy
 * Link: https://leetcode.com/problems/sort-array-by-parity/
