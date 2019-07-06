@@ -43,6 +43,7 @@
     * [824 - Goat Latin](LeetCode/824_goat_latin.md)
     * [832 - Flipping an Image (E)](LeetCode/832_flip_image.md)
     * [859 - Buddy String](LeetCode/859_buddy_string.md)
+    * [905 - Sort Array By Parity I (E)](LeetCode/905_sort_arr_parity1.md)
 
 
 * [LintCode]()
