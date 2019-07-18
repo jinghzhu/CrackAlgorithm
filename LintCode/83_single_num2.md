@@ -62,12 +62,9 @@ one = ~three
 two = ~three
 ```
 
-<br></br>
+<br>
 
 
-
-## Solution
-----
 ### Java
 ```java
 public class SingleNum2 {

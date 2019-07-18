@@ -4,6 +4,7 @@
 
 
 * [LeetCode]()
+    * [1 - Two Sums (E)](LeetCode/1_two_sums.md)
     * [9 - Palindrome Number](LeetCode/9_palindrome_num.md)
     * [14 - Longest Common Prefix](LeetCode/14_longest_common_prefix.md)
     * [22 - strStr](LeetCode/22_strstr.md)
@@ -59,6 +60,7 @@
 
 * [LintCode]()
     * [13 - strStr](LintCode/13_strstr.md)
+    * [56 - Two Sums (E)](LintCode/56_two_sums.md)
     * [69 - Binary Tree Level Order Traversal (E)](LintCode/69_btree_level_order.md)
     * [78 - Longest Common Prefix](LintCode/78_longest_common_prefix.md)
     * [82 - Single Number I (E)](LintCode/82_single_num1.md)
