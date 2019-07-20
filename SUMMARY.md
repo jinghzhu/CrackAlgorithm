@@ -25,6 +25,7 @@
     * [125 - Valid Palindrome](LeetCode/125_valid_palindrome.md)
     * [136 - Single Number I (E)](LeetCode/136_single_num1.md)
     * [137 - Single Number II (M)](LeetCode/137_single_num2.md)
+    * [155 - Min Stack (M)](LeetCode/155_min_stack.md)
     * [168 - Excel Sheet Column Title](LeetCode/168_excel_sheet_column_title.md)
     * [189 - Rotate Array (E)](LeetCode/189_rotate_arr.md)
     * [344 - Reverse String](LeetCode/344_reverse_string.md)
@@ -59,6 +60,7 @@
 
 
 * [LintCode]()
+    * [12 - Min Stack (M)](LintCode/12_min_stack.md)
     * [13 - strStr](LintCode/13_strstr.md)
     * [56 - Two Sums (E)](LintCode/56_two_sums.md)
     * [69 - Binary Tree Level Order Traversal (E)](LintCode/69_btree_level_order.md)
