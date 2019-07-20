@@ -5,6 +5,7 @@
 
 * [LeetCode]()
     * [1 - Two Sums (E)](LeetCode/1_two_sums.md)
+    * [3 - Longest Substring Without Repeating Characters(M)](LeetCode/3_longest_substr_without_repeat_char.md)
     * [9 - Palindrome Number](LeetCode/9_palindrome_num.md)
     * [14 - Longest Common Prefix](LeetCode/14_longest_common_prefix.md)
     * [22 - strStr](LeetCode/22_strstr.md)
@@ -78,6 +79,7 @@
     * [177 - Convert Sorted Array to Binary Search Tree (E)](LintCode/177_sorted_arr_to_bst.md)
     * [213 - String Compression](LintCode/213_str_compress.md)
     * [382 - Triangle Count (E)](LintCode/382_triangle_count.md)
+    * [384 - Longest Substring Without Repeating Characters(M)](LintCode/384_longest_substr_without_repeat_char.md)
     * [389 - Valid Sudoku (E)](LintCode/389_valid_sudoku.md)
     * [408 - Add Binary](LintCode/408_add_binary.md)
     * [415 - Valid Palindrome](LintCode/415_valid_palindrome.md)
