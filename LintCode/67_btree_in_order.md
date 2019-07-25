@@ -7,6 +7,7 @@
 * Tag: DFS, Binary Tree, Recursion
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Difficulty: Easy
+* Company: Microsoft
 * Link: https://www.lintcode.com/problem/binary-tree-inorder-traversal/description
 
 <br></br>
