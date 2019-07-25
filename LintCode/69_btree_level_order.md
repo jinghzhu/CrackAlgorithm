@@ -86,3 +86,34 @@ func LevelOrder(root *TreeNode) [][]int {
 	return result
 }
 ```
+
+<br>
+
+
+### Python
+```python
+class Solution:
+    """
+    @param root: A Tree
+    @return: Level order a list of lists of integer
+    """
+    def levelOrder(self, root):
+        q, result = [], []
+        if root is None:
+            return result
+        q.append(root)
+        while q:
+            l = len(q)
+            tmp =[]
+            for i in range(l):
+                n = q[0]
+                q.pop(0)
+                tmp.append(n.val)
+                if n.left:
+                    q.append(n.left)
+                if n.right:
+                    q.append(n.right)
+            result.append(tmp)
+
+        return result
+```
