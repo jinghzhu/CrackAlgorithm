@@ -4,7 +4,7 @@
 
 <br></br>
 
-* Tag: Array, Two Pointers, Sort, Hashmap
+* Tag: Array, Sort, Hashmap
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Difficulty: Easy
 * Company: Facebook
