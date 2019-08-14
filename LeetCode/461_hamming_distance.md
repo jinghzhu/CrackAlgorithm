@@ -41,7 +41,7 @@ The above arrows point to positions where the corresponding bits are different.
 ----
 ### Java
 ```java
-public class No835HammingDistance {
+public class HammingDistance {
 	/**
      * @param x: an integer
      * @param y: an integer
@@ -73,6 +73,24 @@ public class No835HammingDistance {
         
         return count;
 	}
+
+    /**
+     * @param x: an integer
+     * @param y: an integer
+     * @return: return an integer, denote Hamming Distance between two integers.
+     */
+    public int solution3(int x, int y) {
+        int distance=0;
+        
+        while ( x != 0 || y != 0 ) {
+            if ( x % 2 != y % 2 )
+                distance++;
+            x /= 2;
+            y /= 2;
+        }
+        
+        return distance;
+    }
 }
 ```
 
@@ -109,12 +127,41 @@ class HammingDistance:
             x, y = x >> 1, y >> 1
 
         return count
+    
+    def solution3(self, x: int, y: int) -> int:
+        """
+        @param x: an integer
+        @param y: an integer
+        @return: return an integer, denote the Hamming Distance between two integers
+        """
+        count = 0
+        while x != y:
+            if (x & 1) != (y & 1):
+                count += 1
+            x >>= 1
+            y >>= 1
+        return count
 ```
 
 <br>
 
 
 ### Go
+```go
+func HammingDistance(x, y int) int {
+	count := 0
+	for x != y {
+		if (x & 1) != (y & 1) {
+			count++
+		}
+		x >>= 1
+		y >>= 1
+	}
+
+	return count
+}
+```
+
 ```go
 func HammingDistance(x, y int) int {
 	result := 0
