@@ -1,11 +1,14 @@
-# <center>13 - strStr</center> 
+# <center>13 - strStr (E)</center> 
 
+
+
+<br></br>
 
 * Tag: String
 * Company: Microsoft, Apple, Facebook
-* Author: Jinghua Zhu jhzhu@outlook.com
-
-https://www.lintcode.com/problem/strstr/description
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Difficulty: Easy
+* Link: https://www.lintcode.com/problem/strstr/description
 
 <br></br>
 
@@ -83,4 +86,28 @@ public class StrStr {
         return -1;
     }
 }
+```
+
+<br>
+
+
+### Python
+```python
+class StrStr:
+    def solution(self, a: str, b: str) -> int:
+        if b is None or a is None:
+            return -1
+        if b == "":
+            return 0
+        for i in range(len(a) - len(b) + 1):
+            flag = True
+            k = i
+            for j in range(len(b)):
+                if a[k] != b[j]:
+                    flag = False
+                    break
+                k += 1
+            if flag:
+                return i
+        return -1
 ```

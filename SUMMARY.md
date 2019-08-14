@@ -12,7 +12,7 @@
     * [19 - Remove Nth Node From End of List (M)](LeetCode/19_remove_nth_from_end.md)
     * [20 - Valid Parentheses (E)](LeetCode/20_valid_parentheses.md)
     * [21 - Merge Two Sorted Lists (E)](LeetCode/21_merge_sorted_lists.md)
-    * [22 - strStr](LeetCode/22_strstr.md)
+    * [22 - strStr (E)](LeetCode/22_strstr.md)
     * [24 - Swap Nodes in Pairs (M)](LeetCode/24_swap_pairs.md)
     * [26 - Remove Duplicates from Sorted Array (E)](LeetCode/26_remove_duplicates_from_sorted_arr.md)
     * [27 - Remove Element (E)](LeetCode/27_remove_element.md)
@@ -90,7 +90,7 @@
 
 * [LintCode]()
     * [12 - Min Stack (M)](LintCode/12_min_stack.md)
-    * [13 - strStr](LintCode/13_strstr.md)
+    * [13 - strStr (E)](LintCode/13_strstr.md)
     * [35 - Reverse Linked List (E)](LintCode/35_reverse_linked_list.md)
     * [40 - Implement Queue using Stacks (M)](LintCode/40_implement_queue_with_stacks.md)
     * [41 - Maximum Subarray (E)](LintCode/41_max_subarr1.md)

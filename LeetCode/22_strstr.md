@@ -1,4 +1,4 @@
-# <center>22 - strStr</center> 
+# <center>22 - strStr (E)</center> 
 
 
 
@@ -7,9 +7,8 @@
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Tag: String
 * Company: Microsoft, Apple, Facebook
-* Author: Jinghua Zhu jhzhu@outlook.com
-
-https://leetcode.com/problems/implement-strstr/
+* Difficulty: Easy
+* Link: https://leetcode.com/problems/implement-strstr/
 
 <br></br>
 
@@ -87,4 +86,28 @@ public class StrStr {
         return -1;
     }
 }
+```
+
+<br>
+
+
+### Python
+```python
+class StrStr:
+    def solution(self, a: str, b: str) -> int:
+        if b is None or a is None:
+            return -1
+        if b == "":
+            return 0
+        for i in range(len(a) - len(b) + 1):
+            flag = True
+            k = i
+            for j in range(len(b)):
+                if a[k] != b[j]:
+                    flag = False
+                    break
+                k += 1
+            if flag:
+                return i
+        return -1
 ```
