@@ -71,3 +71,18 @@ func NumJewelsInStones(J, S string) int {
 	return result
 }
 ```
+
+<br>
+
+
+### Python
+```python
+class Solution:
+    def numJewelsInStones(self, J, S):
+        """
+        :type J: str
+        :type S: str
+        :rtype: int
+        """
+        return sum([ch in set(J) for ch in S])
+```

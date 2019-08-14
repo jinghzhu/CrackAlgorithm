@@ -36,7 +36,7 @@ The letters in J are guaranteed distinct, and all characters in J and S are lett
 ----
 ### Java
 ```java
-public class No1038JewelsStones {
+public class JewelsStones {
     public int numJewelsInStones(String J, String S) {
         HashMap<Character, Integer> jewels = new HashMap<Character, Integer>();
         for(int i = 0; i < J.length(); i++)
@@ -70,4 +70,19 @@ func NumJewelsInStones(J, S string) int {
 
 	return result
 }
+```
+
+<br>
+
+
+### Python
+```python
+class Solution:
+    def numJewelsInStones(self, J, S):
+        """
+        :type J: str
+        :type S: str
+        :rtype: int
+        """
+        return sum([ch in set(J) for ch in S])
 ```

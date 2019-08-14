@@ -4,6 +4,7 @@
 
 <br></br>
 
+* Author: Jinghua Zhu <jhzhu@outlook.com>
 * Tag: Recursion, BST
 * Difficulty: Easy
 * Link: https://www.lintcode.com/problem/convert-sorted-array-to-binary-search-tree-with-minimal-height/description
