@@ -143,6 +143,7 @@
     * [661 - Convert BST to Greater Tree](LintCode/661_convert_bst_to_greater_tree.md)
     * [702 - Concatenated String with Uncommon Characters of Two Strings (E)](LintCode/702_concate_uncommond_chars.md)
     * [720 - Rearrange a String With Integers (E)](LintCode/720_rearrange_str.md)
+    * [822 - Reverse Order Storage (E)](LintCode/822_reverse_order_storage.md)
     * [835 - Hamming Distance (E)](LintCode/835_hamming_distance.md)
     * [837 - Palindromic Substrings](LintCode/837_palindromic_substrings.md)
     * [914 - Flip Game](LintCode/914_flip_game.md)
