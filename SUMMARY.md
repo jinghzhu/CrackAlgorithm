@@ -116,6 +116,7 @@
     * [196 - Missing Number (M)](LintCode/196_missing_num.md)
     * [209 - First Unique Character in a String (E)](LintCode/209_first_unique_char_str.md)
     * [213 - String Compression](LintCode/213_str_compress.md)
+    * [366 - Fibonacci (E)](LintCode/366_fibonacci.md)
     * [372 - Delete Node in a Linked List (E)](LintCode/372_delete_node_linkedlist.md)
     * [382 - Triangle Count (E)](LintCode/382_triangle_count.md)
     * [384 - Longest Substring Without Repeating Characters(M)](LintCode/384_longest_substr_without_repeat_char.md)

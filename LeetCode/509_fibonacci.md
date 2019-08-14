@@ -4,6 +4,7 @@
 
 <br></br>
 
+* Author: Jinghua Zhu <jhzhu@outlook.com>
 * Tag: Recursion
 * Difficulty: Easy
 * Link: https://leetcode.com/problems/fibonacci-number/
