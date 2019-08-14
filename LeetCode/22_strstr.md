@@ -1,6 +1,10 @@
 # <center>22 - strStr</center> 
 
 
+
+<br></br>
+
+* Author: Jinghua Zhu <jhzhu@outlook.com>
 * Tag: String
 * Company: Microsoft, Apple, Facebook
 * Author: Jinghua Zhu jhzhu@outlook.com
