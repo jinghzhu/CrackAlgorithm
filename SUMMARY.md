@@ -14,7 +14,7 @@
     * [19 - Remove Nth Node From End of List (M)](LeetCode/19_remove_nth_from_end.md)
     * [20 - Valid Parentheses (E)](LeetCode/20_valid_parentheses.md)
     * [21 - Merge Two Sorted Lists (E)](LeetCode/21_merge_sorted_lists.md)
-    * [22 - strStr (E)](LeetCode/22_strstr.md)
+    * [28 - strStr (E)](LeetCode/28_strstr.md)
     * [24 - Swap Nodes in Pairs (M)](LeetCode/24_swap_pairs.md)
     * [26 - Remove Duplicates from Sorted Array (E)](LeetCode/26_remove_duplicates_from_sorted_arr.md)
     * [27 - Remove Element (E)](LeetCode/27_remove_element.md)
