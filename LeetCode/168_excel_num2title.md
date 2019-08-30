@@ -1,10 +1,13 @@
-# <center>168 - Excel Sheet Column Title</center> 
+# <center>168 - Excel Sheet Column Title (E)</center> 
 
 
-* Tag: String, Math
+
+<br></br>
+
+* Difficulty: Easy
+* Tag: Math
 * Author: Jinghua Zhu jhzhu@outlook.com
-
-https://leetcode.com/problems/excel-sheet-column-title/
+* Link: https://leetcode.com/problems/excel-sheet-column-title/
 
 <br></br>
 
