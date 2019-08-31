@@ -74,6 +74,7 @@
     * [392 - Is Subsequence (M)](LeetCode/392_is_subsequence.md)
     * [405 - Convert a Number to Hexadecimal (E)](LeetCode/405_dec2hex.md)
     * [408 - Valid Word Abbreviation](LeetCode/408_is_abbrevation.md)
+    * [412 - Fizz Buzz (E)](LeetCode/412_fizz_buzz.md)
     * [414 - Third Maximum Number (M)](LeetCode/414_3rd_max_num.md)
     * [437 - Path Sum III](LeetCode/437_path_sum_3.md)
     * [438 - Find All Anagrams in a String (M)](LeetCode/438_find_all_anagrams.md)
@@ -105,6 +106,7 @@
 
 
 * [LintCode]()
+    * [9 - Fizz Buzz (E)](LintCode/9_fizz_buzz.md)
     * [12 - Min Stack (M)](LintCode/12_min_stack.md)
     * [13 - strStr (E)](LintCode/13_strstr.md)
     * [35 - Reverse Linked List (E)](LintCode/35_reverse_linked_list.md)
