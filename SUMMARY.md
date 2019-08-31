@@ -162,6 +162,7 @@
     * [491 - Palindrome Number](LintCode/491_palindrome_num.md)
     * [547 - Intersection of Two Arrays (E)](LintCode/547_intersection_arrays.md)
     * [548 - Intersection of Two Arrays II (E)](LintCode/548_intersection_arrays2.md)
+    * [556 - Standard Bloom Filter (M)](LintCode/556_standard_bloom_filter.md)
     * [637 - Valid Word Abbreviation](LintCode/637_is_abbrevation.md)
     * [646 - First Position Unique Character](LintCode/646_first_pos_unique_char.md)
     * [647 - Find All Anagrams in a String (E)](LintCode/647_find_all_anagrams.md)
