@@ -8,7 +8,7 @@
 * Company: Facebook
 * Tag: String, Matn
 * Author: Jinghua Zhu jhzhu@outlook.com
-* Link: https://leetcode.com/problems/add-binary/
+* Link: https://www.lintcode.com/problem/add-binary/description
 
 <br></br>
 
