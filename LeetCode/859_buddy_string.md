@@ -1,11 +1,12 @@
-# <center>859 - Buddy String</center> 
+# <center>859 - Buddy String (E)</center> 
 
 
+<br></br>
 * Tag: String
 * Company: Google
-* Author: Jinghua Zhu jhzhu@outlook.com
-
-https://leetcode.com/problems/buddy-strings/
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Difficulty: Easy
+* Link: https://leetcode.com/problems/buddy-strings/
 
 <br></br>
 
@@ -86,53 +87,51 @@ func BuddyStrings(A, B string) bool {
 
 ### Java
 ```java
-public class Buddy {
-	/**
+public class Solution {
+    /**
      * @param A: string A
      * @param B: string B
      * @return: bool
      */
     public boolean buddyStrings(String A, String B) {
-        if (A == null && B == null)
-            return true;
-        if (A == null || B == null || A.length() != B.length())
+        if (A.length() != B.length()) {
             return false;
-        
-        char[] a = A.toCharArray();
-        char[] b = B.toCharArray();
-        HashMap<Character, Integer> m = new HashMap<Character, Integer>();
-        int count = 0;
-        char a0 = ' ', b0 = ' ';
-        boolean flag = false;
-        
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] == b[i]) {
-                if (flag == false) {
-                    if (!m.containsKey(a[i]))
-                        m.put(a[i], 1);
-                    else
-                        flag = true;
-                }
-                continue;
+        }
+        if (A.equals(B)) {
+            Set<Character> s = new HashSet<Character>();
+            for (char c : A.toCharArray()) {
+                s.add(c);
             }
-                
-            if (count == 0) {
-                a0 = b[i];
-                b0 = a[i];
-                count = 1;
-            } else if (count == 1) {
-                if (a[i] != a0 || b[i] != b0)
-                    return false;
-                count = 2;
-            } else {
-                return false;
+            return s.size() < A.length();
+        }
+        List<Integer> dif = new ArrayList<>();
+        for (int i = 0; i < A.length(); ++i) {
+            if (A.charAt(i) != B.charAt(i)) {
+                dif.add(i);
             }
         }
-        
-        if (count == 2 || flag == true)
-            return true;
-        
-        return false;
+        return dif.size() == 2 && A.charAt(dif.get(0)) == B.charAt(dif.get(1)) && A.charAt(dif.get(1)) == B.charAt(dif.get(0));
     }
 }
+```
+
+<br>
+
+
+### Python
+```python
+class Solution:
+    """
+    @param A: string A
+    @param B: string B
+    @return: bool
+    """
+    def buddyStrings(self, A, B):
+        # Write your code here
+        if len(A) != len(B): 
+            return False
+        if A == B and len(set(A)) < len(A): 
+            return True
+        dif = [(a, b) for a, b in zip(A, B) if a != b]
+        return len(dif) == 2 and dif[0] == dif[1][::-1]
 ```
