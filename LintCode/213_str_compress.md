@@ -1,10 +1,14 @@
-# <center>213 - String Compression</center> 
+# <center>213 - String Compression (E)</center> 
 
 
+
+<br></br>
+
+* Author: Jinghua Zhu <jhzhu@outlook.com>
 * Tag: String
-* Company: Snapchat, Microsoft, Yelp, Lyft, Bloomberg
-
-https://www.lintcode.com/problem/string-compression/
+* Company: Snapchat, Microsoft, Lyft
+* Difficulty: Easy
+* Link: https://www.lintcode.com/problem/string-compression/description
 
 <br></br>
 
@@ -33,37 +37,6 @@ You can assume the string has only upper and lower case letters (a-z).
 
 ## Solution
 ----
-### Go
-```go
-func Compress(chars []byte) int {
-	start := 0
-	end := 0
-	count := 0
-
-	for end < len(chars) {
-		chars[start] = chars[end]
-		for end < len(chars) && chars[start] == chars[end] {
-			count++
-			end++
-		}
-		if count > 1 {
-			countStr := strconv.Itoa(count)
-			for _, c := range []byte(countStr) {
-				start++
-				chars[start] = c
-			}
-		}
-		start++
-		count = 0
-    }
-    
-	return start
-}
-```
-
-<br>
-
-
 ### Java
 ```java
 public class Compression {
@@ -71,7 +44,7 @@ public class Compression {
      * @param originalString: a string
      * @return: a compressed string
      */
-    public String compress(String originalString) {
+    public String compressLintCode(String originalString) {
         if (originalString == null || originalString.length() < 2)
             return originalString;
         
@@ -99,4 +72,31 @@ public class Compression {
         return originalString;
     }
 }
+```
+
+<br>
+
+
+### Python
+```python
+class Compress:
+    """
+    @param originalString: a string
+    @return: a compressed string
+    """
+    def solution_lintcode(self, originalString):
+        result = ""
+        l = len(originalString)
+        if l < 3:
+            return originalString
+        i = 0
+        while i < l:
+            j, count = i + 1, 1
+            while j < l and originalString[j] == originalString[i]:
+                j, count = j + 1, count + 1
+            result += originalString[i] + str(count)
+            i = j
+        if len(result) >= l:
+            return originalString
+        return result
 ```
