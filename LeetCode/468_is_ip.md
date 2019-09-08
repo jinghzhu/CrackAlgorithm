@@ -1,0 +1,251 @@
+# <center>468 - Validate IP Address (M)</center> 
+
+
+
+<br></br>
+
+* Difficulty: Medium
+* Tag: String
+* Company: Google, Twitter
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Link: https://leetcode.com/problems/validate-ip-address/
+
+<br></br>
+
+
+
+## Description
+----
+ Write a function to check whether an input string is a valid IPv4 address or IPv6 address or neither.
+
+IPv4 addresses are canonically represented in dot-decimal notation, which consists of four decimal numbers, each ranging from 0 to 255, separated by dots ("."), e.g.,172.16.254.1;
+
+Besides, leading zeros in the IPv4 is invalid. For example, the address 172.16.254.01 is invalid.
+
+IPv6 addresses are represented as eight groups of four hexadecimal digits, each group representing 16 bits. The groups are separated by colons (":"). For example, the address 2001:0db8:85a3:0000:0000:8a2e:0370:7334 is a valid one. Also, we could omit some leading zeros among four hexadecimal digits and some low-case characters in the address to upper-case ones, so 2001:db8:85a3:0:0:8A2E:0370:7334 is also a valid IPv6 address(Omit leading zeros and using upper cases).
+
+However, we don't replace a consecutive group of zero value with a single empty group using two consecutive colons (::) to pursue simplicity. For example, 2001:0db8:85a3::8A2E:0370:7334 is an invalid IPv6 address.
+
+Besides, extra leading zeros in the IPv6 is also invalid. For example, the address 02001:0db8:85a3:0000:0000:8a2e:0370:7334 is invalid. 
+
+<br></br>
+
+
+
+## Example
+----
+1. Input: "172.16.254.1" Output: "IPv4"
+2. Input: "2001:0db8:85a3:0:0:8A2E:0370:7334" Output: "IPv6"
+3. Input: "256.256.256.256" Output: "Neither"
+
+<br></br>
+
+
+
+## Solution
+----
+### Go
+```go
+import "strings"
+
+func validIPAddress(ip string) string {
+    if (isIPv4(ip)) {
+        return "IPv4"
+    }
+    if (isIPv6(ip)) {
+        return "IPv6"
+    }
+    return "Neither"
+}
+
+func isIPv4(ip string) bool {
+    ips := strings.Split(ip, ".")
+    l := len(ips)
+    if l != 4 {
+        return false
+    }
+    for _, v := range ips {
+        lv, tmp := len(v), 0
+        if lv > 3 || lv < 1 {
+            return false
+        }
+        if v[0] == '0' && lv > 1 {
+            return false
+        }
+        for _, x := range v {
+            if x < '0' || x > '9' {
+                return false
+            }
+            tmp = 10 * tmp + int(x - '0')
+        }
+        if tmp > 255 {
+            return false
+        }
+    }
+    
+    return true
+}
+
+func isIPv6(ip string) bool {
+    ips := strings.Split(ip, ":")
+    l := len(ips)
+    if l != 8 {
+        return false
+    }
+    validStr := "0123456789ABCDEFabcdef"
+    for _, v := range ips {
+        if len(v) < 1 || len(v) > 4 {
+            return false
+        }
+        for _, x := range v {
+            if !strings.Contains(validStr, string(x)) {
+                return false
+            }
+        }
+    }
+    
+    return true
+}
+```
+
+<br>
+
+
+### Java
+```java
+public class IsIP {
+	private static final String IPv6_CHAR = "0123456789abcdefABCDEF";
+	private static final char IPv4_SPEARATOR = '.';
+	private static final char IPv6_SPEARATOR = ':';
+	private static final int MAX = 255;
+	
+	/**
+	 * @param ip: a string
+     * @return: 0 for invalid ip address; 1 for IPv4; 2 for IPv6.
+	 */
+	public String validIPAddress(String ip) {
+		if (ip == null || ip.length() < 7)
+			return "Neither";
+        if (isIPv4(ip))
+        	return "IPv4";
+        if (isIPv6(ip))
+        	return "IPv6";
+        
+        return "Neither";
+    }
+	
+	private boolean isIPv4(String ip){
+    	if (ip == null || ip.length() < 7 || ip.length() > 15)
+    		return false;
+    	
+    	char[] chars = ip.toCharArray();
+    	int i = 0, count = 0;
+    	for (; i < chars.length && count < 4; i++) {
+    		int tmp = 0, j = i;
+    		for (; j < chars.length && j < i + 4; j++) {
+                if (j == i && chars[j] == '0' && (j + 1 == chars.length || chars[j + 1] != IPv4_SPEARATOR))
+                    return false; // for xx.01.xx
+    			if (chars[j] == IPv4_SPEARATOR)
+    				break;
+    			if (!Character.isDigit(chars[j]))
+    			    return false;
+    			tmp = 10 * tmp + chars[j] - '0';
+    		}
+    		if (tmp > MAX)
+    		    return false;
+            if (i == j) // for 0..0
+                return false;
+    		count++;
+    		i = j;
+    		if (i == chars.length || count == 4)
+    			break;
+    	}
+        
+        return count == 4 && i == chars.length;
+    }
+    
+    public boolean isIPv6(String ip) {
+        if (ip == null || ip.length() < 15 || ip.length() > 39)
+        	return false;
+        
+        char[] chars = ip.toCharArray();
+        int i = 0, count = 0;
+        for (; i < chars.length && count < 8; i++) {
+        	int j = i;
+        	for (; j < chars.length && j < i + 4; j++) {
+        		if (chars[j] == IPv6_SPEARATOR)
+        			break;
+        		if(!IPv6_CHAR.contains(String.valueOf(chars[j])))
+                    return false;
+        	}
+        	if (j == i) // for 0::0
+                return false;
+        	i = j;
+        	count++;
+        	if (i == chars.length || count == 8)
+        		break;
+        }
+        
+        return count == 8 && i == chars.length;
+    }
+}
+```
+
+<br>
+
+
+### Python
+```python
+class IsIP:
+    """
+    @param IP: the given IP
+    @return: whether an input string is a valid IPv4 address or IPv6 address or neither
+    """
+    def solution(self, IP):
+        if not IP:
+            return "Neither"
+        if self.is_ipv4(IP):
+            return "IPv4"
+        if self.is_ipv6(IP):
+            return "IPv6"
+        return "Neither"
+
+    def is_ipv4(self, ip):
+        ips = ip.split(".")
+        l = len(ips)
+        if l != 4:
+            return False
+        for i in range(l):
+            s = ips[i]
+            ls = len(s)
+            if ls == 0 or ls > 3:
+                return False
+            if ls > 1 and s[0] == '0':
+                return False
+            tmp = 0
+            for j in range(ls):
+                if s[j] < '0' or s[j] > '9':
+                    return False
+                tmp = tmp * 10 + int(s[j])
+            if tmp > 255:
+                return False
+
+        return True
+
+    def is_ipv6(self, ip):
+        ips = ip.split(":")
+        l = len(ips)
+        if l != 8:
+            return False
+        valid_chars = "0123456789abcdefABCDEF"
+        for i in range(l):
+            s = ips[i]
+            ls = len(s)
+            if ls > 4 or ls < 1:
+                return False
+            for j in range(ls):
+                if s[j] not in valid_chars:
+                    return False
+
+        return True
+```
