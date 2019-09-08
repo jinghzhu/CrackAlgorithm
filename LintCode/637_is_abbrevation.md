@@ -1,11 +1,14 @@
-# <center>637 - Valid Word Abbreviation</center> 
+# <center>637 - Valid Word Abbreviation (E)</center> 
 
+
+
+<br></br>
 
 * Tag: String
 * Company: Google
-* Author: Jinghua Zhu jhzhu@outlook.com
-
-https://www.lintcode.com/problem/valid-word-abbreviation/description
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Difficulty: Easy
+* Link: https://www.lintcode.com/problem/valid-word-abbreviation/description
 
 <br></br>
 
@@ -103,4 +106,38 @@ public class IsAbbreviation {
         return abbrLen == wordC.length;
     }
 }
+```
+
+<br>
+
+
+### Python
+```python
+class IsAbbreviation:
+    """
+    @param word: a non-empty string
+    @param abbr: an abbreviation
+    @return: true if string matches with the given abbr or false
+    """
+    def validWordAbbreviation(self, word, abbr):
+        if word is None or abbr is None or len(word) < len(abbr):
+            return False
+        l1, l2 = len(word), len(abbr)
+        tmp, abbr_last_char_index, word_index = 0, -1, -1
+        for abbr_cur_index in range(l2):
+            if '0' <= abbr[abbr_cur_index] <= '9':
+                tmp = 10 * tmp + int(abbr[abbr_cur_index])
+            elif tmp > 0:
+                word_index += 1 + tmp  # Important.
+                tmp = 0
+                if word_index >= l1 or word[word_index] != abbr[abbr_cur_index]:
+                    return False
+                abbr_last_char_index = abbr_cur_index
+            else:
+                abbr_last_char_index, word_index = abbr_cur_index, word_index + 1
+                if word[word_index] != abbr[abbr_cur_index]:
+                    return False
+        if tmp > 0:  # Important.
+            word_index += tmp
+        return word_index == l1 - 1
 ```
