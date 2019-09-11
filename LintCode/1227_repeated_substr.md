@@ -1,4 +1,4 @@
-# <center>1227 - Repeated Substring Pattern</center> 
+# <center>1227 - Repeated Substring Pattern (E)</center> 
 
 
 
