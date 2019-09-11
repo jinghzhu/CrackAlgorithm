@@ -1,5 +1,8 @@
-# <center>65 - To Lower Case (H)</center> 
+# <center>65 - Valid Number (H)</center> 
 
+
+
+<br></br>
 
 * Tag: String
 * Author: Jinghua Zhu <jhzhu@outlook.com>
@@ -42,6 +45,14 @@ Validate if a given string is numeric.
 
 ## Solution
 ----
+Steps:
+1. Check if it contains `e` or `.`. If so, go to dedicated case to verity it.
+2. Verify it as normal number.
+
+<b>
+
+
+
 ### Go
 ```go
 import "strings"

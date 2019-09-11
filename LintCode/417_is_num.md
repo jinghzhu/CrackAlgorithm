@@ -1,11 +1,14 @@
-# <center>1535 - To Lower Case (E)</center> 
+# <center>417 - Valid Number (E)</center> 
 
+
+
+<br></br>
 
 * Tag: String
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Difficulty: Easy
 * Company: LinkedIn
-* Link: https://www.lintcode.com/problem/to-lower-case/description
+* Link: https://www.lintcode.com/problem/valid-number/description
 
 <br></br>
 
@@ -42,6 +45,14 @@ Validate if a given string is numeric.
 
 ## Solution
 ----
+Steps:
+1. Check if it contains `e` or `.`. If so, go to dedicated case to verity it.
+2. Verify it as normal number.
+
+<b>
+
+
+
 ### Go
 ```go
 import "strings"
