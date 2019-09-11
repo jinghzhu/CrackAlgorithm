@@ -1,11 +1,13 @@
-# <center>78 - Longest Common Prefix</center> 
+# <center>78 - Longest Common Prefix (E)</center> 
 
+
+
+<br></br>
 
 * Tag: String
-* Company: Yelp
-* Author: Jinghua Zhu jhzhu@outlook.com
-
-https://www.lintcode.com/problem/longest-common-prefix/description
+* Difficulty: Easy
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Link: https://www.lintcode.com/problem/longest-common-prefix/description
 
 <br></br>
 
