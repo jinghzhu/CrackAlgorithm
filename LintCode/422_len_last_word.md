@@ -1,10 +1,13 @@
-# <center>422 - Length of Last Word</center> 
+# <center>422 - Length of Last Word (E)</center> 
 
 
+
+<br></br>
+
+* Difficulty: Easy
 * Tag: String
-* Author: Jinghua Zhu jhzhu@outlook.com
-
-https://www.lintcode.com/problem/length-of-last-word/description
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Link: https://www.lintcode.com/problem/length-of-last-word/description
 
 <br></br>
 

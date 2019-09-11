@@ -1,10 +1,13 @@
-# <center>58 - Length of Last Word</center> 
+# <center>58 - Length of Last Word (E)</center> 
 
 
+
+<br></br>
+
+* Difficulty: Easy
 * Tag: String
-* Author: Jinghua Zhu jhzhu@outlook.com
-
-https://leetcode.com/problems/length-of-last-word/
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Link: https://leetcode.com/problems/length-of-last-word/
 
 <br></br>
 
