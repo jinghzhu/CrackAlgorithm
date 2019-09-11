@@ -40,7 +40,7 @@
     * [108 - Convert Sorted Array to Binary Search Tree (E)](LeetCode/108_sorted_arr_to_bst.md)
     * [111 - Minimum Depth of Binary Tree (E)](LeetCode/111_btree_min_depth.md)
     * [122 - Best Time to Buy and Sell Stock II (E)](LeetCode/122_stock2.md)
-    * [125 - Valid Palindrome](LeetCode/125_valid_palindrome.md)
+    * [125 - Valid Palindrome (E)](LeetCode/125_valid_palindrome.md)
     * [136 - Single Number I (E)](LeetCode/136_single_num1.md)
     * [137 - Single Number II (M)](LeetCode/137_single_num2.md)
     * [144 - Binary Tree Preorder Traversal (M)](LeetCode/144_btree_pre_order.md)

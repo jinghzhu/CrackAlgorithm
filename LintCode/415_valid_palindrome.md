@@ -1,10 +1,14 @@
-# <center>415 - Valid Palindrome</center> 
+# <center>415 - Valid Palindrome (E)</center> 
 
 
+
+<br></br>
+
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Difficulty: Easy
 * Tag: String, Two Pointers
 * Company: Microsoft, Uber, Facebook
-
-https://www.lintcode.com/problem/valid-palindrome/description
+* Link: https://www.lintcode.com/problem/valid-palindrome/description
 
 <br></br>
 
