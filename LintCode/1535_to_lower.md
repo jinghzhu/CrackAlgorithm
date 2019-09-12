@@ -1,11 +1,13 @@
 # <center>1535 - To Lower Case (E)</center> 
 
 
+
+<br></br>
+
 * Tag: String
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Difficulty: Easy
-
-https://www.lintcode.com/problem/to-lower-case/description
+* Link: https://www.lintcode.com/problem/to-lower-case/description
 
 <br></br>
 

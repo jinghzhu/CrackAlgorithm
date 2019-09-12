@@ -1,11 +1,13 @@
 # <center>709 - To Lower Case (E)</center> 
 
 
+
+<br></br>
+
 * Tag: String
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Difficulty: Easy
-
-https://leetcode.com/problems/to-lower-case/
+* Link: https://leetcode.com/problems/to-lower-case/
 
 <br></br>
 
