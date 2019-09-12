@@ -1,10 +1,10 @@
-# <center>1079 - Count Binary Substrings</center> 
+# <center>1079 - Count Binary Substrings (E)</center> 
 
 
 
 <br></br>
 
-* Tag: String, Two Pointer
+* Tag: String, Two Pointers
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Difficulty: Easy
 * Link: https://www.lintcode.com/problem/count-binary-substrings/description

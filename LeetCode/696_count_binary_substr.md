@@ -4,7 +4,7 @@
 
 <br></br>
 
-* Tag: String, Two Pointer
+* Tag: String, Two Pointers
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Difficulty: Easy
 * Link: https://leetcode.com/problems/count-binary-substrings/
