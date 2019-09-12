@@ -1,11 +1,13 @@
-# <center>647 - Palindromic Substrings</center> 
+# <center>647 - Palindromic Substrings (M)</center> 
 
+
+
+<br></br>
 
 * Tag: String, DP
 * Company: Facebook, LinkedIn
-* Author: Jinghua Zhu jhzhu@outlook.com
-
-https://www.lintcode.com/problem/palindromic-substrings/description
+* Difficulty: Medium
+* Link: https://www.lintcode.com/problem/palindromic-substrings/description
 
 <br></br>
 
@@ -74,6 +76,27 @@ func cpsHelper(s string, i, j int) int {
 	}
 
 	return count
+}
+```
+
+```go
+func countSubstrings(s string) int {
+    l, count := len(s), 0
+    dp := make([][]int, l, l)
+    for k := range dp {
+        dp[k] = make([]int, l, l)
+    }
+    for i := 0; i < l; i++ {
+        for j := 0; j <= i; j++ {
+            dp[j][i] = 0
+            if s[j] == s[i] && (i - j <= 2 || dp[j + 1][i - 1] == 1) {
+                dp[j][i] = 1
+            }
+            count += dp[j][i]
+        }
+    }
+    
+    return count
 }
 ```
 

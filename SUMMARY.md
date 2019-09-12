@@ -95,7 +95,7 @@
     * [572 - Subtree of Another Tree](LeetCode/572_is_subtree.md)
     * [581 - Shortest Unsorted Continuous Subarray (E)](LeetCode/581_shortest_unsorted_subarr.md)
     * [617 - Merge Two Binary Trees (E)](LeetCode/617_merge_trees.md)
-    * [647 - Palindromic Substrings](LeetCode/647_palindromic_substrings.md)
+    * [647 - Palindromic Substrings (M)](LeetCode/647_palindromic_substrings.md)
     * [696 - Count Binary Substrings (E)](LeetCode/696_count_binary_substr.md)
     * [704 - Binary Search (E)](LeetCode/704_binary_search.md)
     * [709 - To Lower Case (E)](LeetCode/709_to_lower.md)
