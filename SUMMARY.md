@@ -101,6 +101,7 @@
     * [704 - Binary Search (E)](LeetCode/704_binary_search.md)
     * [709 - To Lower Case (E)](LeetCode/709_to_lower.md)
     * [771 - Jewels and Stones (E)](LeetCode/771_jewels_stones.md)
+    * [796 - Rotate String (E)](LeetCode/796_rotate_str.md)
     * [824 - Goat Latin](LeetCode/824_goat_latin.md)
     * [832 - Flipping an Image (E)](LeetCode/832_flip_image.md)
     * [859 - Buddy String (E)](LeetCode/859_buddy_string.md)
@@ -110,6 +111,7 @@
 
 
 * [LintCode]()
+    * [8 - Rotate String (E)](LintCode/8_rotate_str.md)
     * [9 - Fizz Buzz (E)](LintCode/9_fizz_buzz.md)
     * [12 - Min Stack (M)](LintCode/12_min_stack.md)
     * [13 - strStr (E)](LintCode/13_strstr.md)
