@@ -1,10 +1,13 @@
-# <center>344 - Reverse String</center> 
+# <center>344 - Reverse String (E)</center> 
 
 
+
+<br></br>
+
+* Difficulty: Easy
 * Tag: String, Two Pointer
-* Author: Jinghua Zhu jhzhu@outlook.com Jianlan Zhou
-
-https://leetcode.com/problems/reverse-string/
+* Author: Jinghua Zhu <jhzhu@outlook.com>, Jianlan Zhou <jianlanz@outlook.com>
+* Link: https://leetcode.com/problems/reverse-string/
 
 <br></br>
 

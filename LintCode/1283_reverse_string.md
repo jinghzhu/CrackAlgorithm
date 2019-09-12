@@ -1,10 +1,13 @@
-# <center>1283 - Reverse String</center> 
+# <center>1283 - Reverse String (E)</center> 
 
 
+
+<br></br>
+
+* Difficulty: Easy
 * Tag: String, Two Pointer
-* Author: Jinghua Zhu jhzhu@outlook.com Jianlan Zhou
-
-https://www.lintcode.com/problem/reverse-string/description
+* Author: Jinghua Zhu <jhzhu@outlook.com>, Jianlan Zhou <jianlanz@outlook.com>
+* Link: https://www.lintcode.com/problem/reverse-string/description
 
 <br></br>
 
