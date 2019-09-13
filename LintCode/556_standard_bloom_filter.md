@@ -177,3 +177,75 @@ class BloomFilter:
 ```
 
 <br>
+
+
+### Go
+```go
+import (
+	"math/rand"
+	"time"
+)
+
+type bloomHash struct {
+	cap  int
+	seed int
+}
+
+func newBloomHash(c, s int) *bloomHash {
+	return &bloomHash{
+		cap:  c,
+		seed: s,
+	}
+}
+
+func (b *bloomHash) hash(data string) int {
+	result := 0
+	for _, v := range data {
+		result += b.seed*result + int(v)
+		result %= b.cap
+	}
+
+	return result
+}
+
+// BloomFilter is a standard bloom filter. Support the following methods:
+// 1. NewBloomFilter(k) - The constructor and you need to create k hash functions.
+// 2. Add(string) - Add a string into bloom filter.
+// 3. Contains(string) - Check a string whether exists in bloom filter.
+type BloomFilter struct {
+	BitSet   map[int]bool
+	HashFunc []*bloomHash
+}
+
+// NewBloomFilter returns a new instance of Bloom Filter.
+func NewBloomFilter(n int) *BloomFilter {
+	b := &BloomFilter{
+		BitSet:   make(map[int]bool),
+		HashFunc: make([]*bloomHash, n, n),
+	}
+	for i := 0; i < n; i++ {
+		rand.Seed(time.Now().UnixNano())
+		b.HashFunc[i] = newBloomHash(rand.Intn(100000), i*2+3)
+	}
+
+	return b
+}
+
+// Add a string into bloom filter.
+func (b *BloomFilter) Add(s string) {
+	for _, h := range b.HashFunc {
+		b.BitSet[h.hash(s)] = true
+	}
+}
+
+// Contains checks a string whether exists in bloom filter.
+func (b *BloomFilter) Contains(s string) bool {
+	for _, h := range b.HashFunc {
+		if _, ok := b.BitSet[h.hash(s)]; !ok {
+			return false
+		}
+	}
+
+	return true
+}
+```
