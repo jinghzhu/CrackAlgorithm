@@ -5,7 +5,7 @@
 <br></br>
 
 * Author: Jinghua Zhu <jhzhu@outlook.com>
-* Tag: Two Pointers, Linked List
+* Tag: Linked List
 * Difficulty: Easy
 * Link: https://www.lintcode.com/problem/remove-nth-node-from-end-of-list/description
 
@@ -36,12 +36,7 @@ After removing the second node from the end, the linked list becomes 1->2->3->5.
 ### Java
 ```java
 public class RemoveNthFromEnd {
-	/**
-     * @param h: The first node of linked list.
-     * @param n: An integer
-     * @return: The head of linked list.
-     */
-	public ListNode solution2(ListNode h, int n) {
+	public ListNode solution1(ListNode h, int n) {
 		if (n < 1 || h == null)
 			return null;
 		ListNode dummyH = new ListNode();
@@ -63,6 +58,31 @@ public class RemoveNthFromEnd {
 		
 		return h;
 	}
+	
+	public ListNode solution2(ListNode head, int n) {
+        if (head == null || n < 1)
+            return head;
+        ListNode pre = null, cur = head, end = head;
+        int i = 0;
+        for (; end != null && i < n; i++)
+            end = end.next;
+        if (end == null && i < n)
+            return head;
+        for (; end != null; end = end.next) {
+            pre = cur;
+            cur = cur.next;
+        }
+        if (pre == null) {
+            cur = head.next;
+            head.next = null;
+            head = cur;
+        } else {
+            pre.next = cur.next;
+            cur.next = null;
+        }
+        
+        return head;
+    }
 }
 ```
 
@@ -96,6 +116,34 @@ func RemoveNthFromEnd(head *ListNode, n int) *ListNode {
 }
 ```
 
+```go
+func RemoveNthFromEnd(head *ListNode, n int) *ListNode {
+	if n < 1 || head == nil {
+		return head
+	}
+	var pre *ListNode
+	cur, end := head, head
+	i := 0
+	for ; i < n && end != nil; i++ {
+		end = end.Next
+	}
+	if end == nil && i < n {
+		return head
+	}
+	for ; end != nil; end = end.Next {
+		pre, cur = cur, cur.Next
+	}
+	if pre == nil {
+		cur = head.Next
+		head.Next, head = nil, cur
+	} else {
+		pre.Next, cur.Next = cur.Next, nil
+	}
+
+	return head
+}
+```
+
 <br>
 
 
@@ -103,7 +151,7 @@ func RemoveNthFromEnd(head *ListNode, n int) *ListNode {
 ----
 ```python
 class remove_nth_from_end:
-    def solution(self, head, n):
+        def solution1(self, head, n):
         if n < 1:
             return head
         dummy = ListNode(0)
@@ -121,5 +169,26 @@ class remove_nth_from_end:
         cur.next = None
         head = dummy.next
         dummy.next = None
+
+        return head
+
+    def solution2(self, head: ListNode, n: int) -> ListNode:
+        if not head or n < 1:
+            return head
+        pre, cur, end = None, head, head
+        i = 0
+        while i < n and end:
+            end = end.next
+            i += 1
+        if not end and i < n:
+            return head
+        while end:
+            pre, cur, end = cur, cur.next, end.next
+        if not pre:
+            head.next, cur = None, head.next
+            head = cur
+        else:
+            pre.next, cur.next = cur.next, None
+
         return head
 ```
