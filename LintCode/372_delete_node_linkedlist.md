@@ -7,6 +7,7 @@
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Tag: Linked List
 * Difficulty: Easy
+* Company: Apple, Microsoft
 * Link: https://www.lintcode.com/problem/delete-node-in-a-linked-list/description
 
 <br></br>
