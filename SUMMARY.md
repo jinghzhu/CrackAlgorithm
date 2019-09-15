@@ -21,6 +21,7 @@
     * [27 - Remove Element (E)](LeetCode/27_remove_element.md)
     * [28 - strStr (E)](LeetCode/28_strstr.md)
     * [29 - Divide Two Integers (M)](LeetCode/29_divide.md)
+    * [34 - Find First and Last Position of Element in Sorted Array (M)](LeetCode/34_first_last_element.md)
     * [36 - Valid Sudoku (E)](LeetCode/36_valid_sudoku.md)
     * [38 - Count and Say](LeetCode/38_count_say.md)
     * [48 - Rotate Image (M)](LeetCode/48_rotate_image.md)
@@ -229,3 +230,4 @@
     * [1394 - Goat Latin](LintCode/1394_goat_latin.md)
     * [1510 - Buddy String (E)](LintCode/1510_buddy_string.md)
     * [1535 - To Lower Case (E)](LintCode/1535_to_lower.md)
+    * [1536 - Find First and Last Position of Element in Sorted Array (M)](LintCode/1536_first_last_element.md)
