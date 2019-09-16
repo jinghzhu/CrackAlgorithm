@@ -186,6 +186,7 @@
     * [451 - Swap Nodes in Pairs (E)](LintCode/451_swap_pairs.md)
     * [452 - Remove Linked List Elements (E)](LintCode/452_remove_linked_list_elements.md)
     * [457 - Binary Search (E)](LintCode/457_binary_search.md)
+    * [462 - Total Occurrence of Target (M)](LintCode/462_total_occurrence.md)
     * [491 - Palindrome Number](LintCode/491_palindrome_num.md)
     * [547 - Intersection of Two Arrays (E)](LintCode/547_intersection_arrays.md)
     * [548 - Intersection of Two Arrays II (E)](LintCode/548_intersection_arrays2.md)
