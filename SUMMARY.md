@@ -190,6 +190,7 @@
     * [547 - Intersection of Two Arrays (E)](LintCode/547_intersection_arrays.md)
     * [548 - Intersection of Two Arrays II (E)](LintCode/548_intersection_arrays2.md)
     * [556 - Standard Bloom Filter (M)](LintCode/556_standard_bloom_filter.md)
+    * [585 - Maximum Number in Mountain Sequence (M)](LintCode/585_max_num_mountain.md)
     * [633 - Find the Duplicate Number (H)](LintCode/633_find_dulicated_num.go)
     * [637 - Valid Word Abbreviation (E)](LintCode/637_is_abbrevation.md)
     * [646 - First Position Unique Character](LintCode/646_first_pos_unique_char.md)
