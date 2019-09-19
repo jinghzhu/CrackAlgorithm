@@ -127,6 +127,7 @@
     * [9 - Fizz Buzz (E)](LintCode/9_fizz_buzz.md)
     * [12 - Min Stack (M)](LintCode/12_min_stack.md)
     * [13 - strStr (E)](LintCode/13_strstr.md)
+    * [14 - First Position of Target (M)](LintCode/14_first_position.md)
     * [35 - Reverse Linked List (E)](LintCode/35_reverse_linked_list.md)
     * [40 - Implement Queue using Stacks (M)](LintCode/40_implement_queue_with_stacks.md)
     * [41 - Maximum Subarray (E)](LintCode/41_max_subarr1.md)
