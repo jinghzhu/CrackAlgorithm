@@ -175,6 +175,7 @@
     * [173 - Insertion Sort List (E)](LintCode/173_insertion_sort_list.md)
     * [174 - Remove Nth Node From End of List (E)](LintCode/174_remove_nth_from_end.md)
     * [177 - Convert Sorted Array to Binary Search Tree (E)](LintCode/177_sorted_arr_to_bst.md)
+    * [183 - Wood Cut (H)](LintCode/183_wood_cut.md)
     * [196 - Missing Number (M)](LintCode/196_missing_num.md)
     * [200 - Longest Palindromic Substring (M)](LintCode/200_longest_palindromic_substr.md)
     * [209 - First Unique Character in a String (E)](LintCode/209_first_unique_char_str.md)
