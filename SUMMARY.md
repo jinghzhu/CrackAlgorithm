@@ -260,3 +260,8 @@
     * [1535 - To Lower Case (E)](LintCode/1535_to_lower.md)
     * [1536 - Find First and Last Position of Element in Sorted Array (M)](LintCode/1536_first_last_element.md)
     * [1623 - Minimal Distance In The Array (E)](LintCode/1623_min_distance_arr.md)
+
+
+* [HackerRank]()
+    * [30 Days of Code]()
+        * [Day 10: Binary Number (E)](HackerRank/30DaysCode/day10_sum_consecutive_1_binary.md)
