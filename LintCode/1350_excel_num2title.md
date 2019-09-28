@@ -92,3 +92,22 @@ public class ExcelSheetColumnTitle {
 }
 
 ```
+
+<br>
+
+
+### Python
+```python
+class Solution:
+    def convertToTitle(self, n: int) -> str:
+        s = ""
+        if n < 1:
+            return s
+        while n > 0:
+            n -= 1
+            i = n % 26
+            s = chr(ord('A') + i) + s
+            n //= 26
+        
+        return s
+```
