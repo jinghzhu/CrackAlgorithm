@@ -1,10 +1,13 @@
-# <center>491 - Palindrome Number</center> 
+# <center>491 - Palindrome Number (E)</center> 
 
+
+
+<br></br>
 
 * Tag: String
-* Author: Jinghua Zhu jhzhu@outlook.com
-
-https://www.lintcode.com/problem/palindrome-number/description
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Difficulty: Easy
+* Link: https://www.lintcode.com/problem/palindrome-number/description
 
 <br></br>
 

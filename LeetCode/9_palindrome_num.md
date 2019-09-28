@@ -1,10 +1,13 @@
-# <center>9 - Palindrome Number</center> 
+# <center>9 - Palindrome Number (E)</center> 
 
+
+
+<br></br>
 
 * Tag: String
-* Author: Jinghua Zhu jhzhu@outlook.com
-
-https://leetcode.com/problems/palindrome-number/
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Link: https://leetcode.com/problems/palindrome-number/
+* Difficulty: Easy
 
 <br></br>
 
