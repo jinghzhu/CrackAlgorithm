@@ -58,46 +58,31 @@ public class Dec2Hex {
         return result.replaceFirst("^0*", "");
 	}
 	
-	// 负数的存储方式是补码的形式，负数的补码等于其正数反码+1
-	// 2的反码表示形式就是1101，所以-2的表示形式就是其反码+1，是1110
+	/*
+	 *  整型数在计算机内部是二进制形式存储，那么不管的是正数还是负数，其实计算机已有了完整的存储，
+	 *  那么其实不需要再去计算反码补码，只需对其进行2进制转换成16进制就可以了。
+	 *  
+	 *  因为二进制一位表示的是2,16进制一位表示的是16，那么16进制下一位表示的是2进制下的4位(16 = 2^4)。
+	 *  在转换过程中可以每四位转换成一位，这里有个小技巧：用到位运算&和>>来提高运行速度，&15相当于%16
+	 */
 	public String solution2(int num) {
 		if (num == 0)
 			return "0";
 		
-		long n = num > 0 ? num : -num;
-		int[] bit = new int[10];
-		int len = 0, leader0 = 1; // leader0 is to local first 0 in hex expression
 		String ans = "";
-		for (int v : bit)
-			v = 0;
-		
-		while (n > 0) {
-			bit[len++] = (int)n % 16;
-			n /= 16;
-		}
-		
-		if (num < 0) { // translate its true form into complement form 
-			for (int i = 0; i < 8; i++)
-				bit[i] = 15 - bit[i];
-			int pos = 0;
-			while (bit[pos] == 15) 
-				bit[pos++] = 0;
-			bit[pos]++;
-		}
-		
-		for (int i = 7; i >= 0; i--) {
-			if (bit[i] != 0)
-				leader0 = 0;
-			if (leader0 == 1)
-				continue;
-			if (bit[i] < 10)
-				ans += (char)('0' + bit[i]);
+		int len = 0;
+		while (num != 0 && len < 8) {
+			int bit = num & 15;
+			if (bit < 10)
+				ans = (char)(bit + '0') + ans;
 			else
-				ans += (char)('a' + bit[i] - 10);
+				ans = (char)(bit - 10 + 'a') + ans;
+			num >>= 4;
+			len++;
 		}
 		
 		return ans;
-	}	
+	}
 }
 ```
 
@@ -122,13 +107,33 @@ func Dec2Hex(num int) string {
 }
 ```
 
+```go
+func Dec2Hex2(num int) string {
+	if num == 0 {
+		return "0"
+	}
+	s := ""
+	for i := 0; num != 0 && i < 8; i++ {
+		tmp := num & 15
+		if tmp < 10 {
+			s = string('0'+tmp) + s
+		} else {
+			s = string('a'+tmp-10) + s
+		}
+		num >>= 4
+	}
+
+	return s
+}
+```
+
 <br>
 
 
 ### Python
 ```python
 class Solution:
-    def toHex(self, num: int) -> str:
+    def toHex1(self, num: int) -> str:
         if num == 0:
             return '0'
         data = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
@@ -137,4 +142,20 @@ class Solution:
             result = data[num & 15] + result
             num >>= 4
         return result.lstrip("0")
+	
+	def toHex2(self, num: int) -> str:
+        if num == 0:
+            return "0"
+        s = ""
+        for i in range(8):
+            if num == 0:
+                break
+            tmp = num & 15
+            if tmp < 10:
+                s = str(tmp) + s
+            else:
+                s = chr(tmp - 10 + ord('a')) + s
+            num >>= 4
+        
+        return s
 ```
