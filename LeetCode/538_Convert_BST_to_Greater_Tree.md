@@ -1,10 +1,14 @@
-# <center>538 - Convert BST to Greater Tree</center> 
+# <center>538 - Convert BST to Greater Tree (E)</center> 
 
 
-* Tag: BFS, BST, Recursion
+
+<br></br>
+
+* Author: Jinghua Zhu <jhzhu@outlook.com>
+* Tag: DFS, BST, Recursion
 * Company: Amazon
-
-https://leetcode.com/problems/convert-bst-to-greater-tree/
+* Difficulty: Easy
+* Link: https://leetcode.com/problems/convert-bst-to-greater-tree/
 
 <br></br>
 
@@ -44,8 +48,6 @@ The key is that the list of in-order traversal of BST records the nodes from sma
 
 
 ### Go
-* Author: Jinghua Zhu jhzhu@outlook.com
-
 ```go
 var sumGreaterTree int
 
@@ -120,4 +122,46 @@ public class BST2GreaterTree {
         return root;
     }
 }
+```
+
+<br>
+
+
+### Python
+```python
+class Convert2GreaterTree:
+    def __init__(self):
+        self.val_tmp = 0
+
+    """
+    @param root: the root of binary tree
+    @return: the new root
+    """
+    def solution1(self, root):
+        if root:
+            self.convertBST(root.right)
+            root.val += self.val_tmp
+            self.val_tmp = root.val
+            self.convertBST(root.left)
+        return root
+
+    """
+    @param root: the root of binary tree
+    @return: the new root
+    """
+    def solution2(self, root):
+        n = root
+        st = []
+        val = 0
+        while len(st) > 0 or n:
+            while n:
+                st.append(n)
+                n = n.right
+            if len(st) > 0:
+                n = st.pop()
+                n.val += val
+                val = n.val
+                n = n.left
+
+        return root
 ```
