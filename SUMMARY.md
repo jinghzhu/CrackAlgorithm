@@ -139,6 +139,7 @@
 * [LintCode]()
     * [8 - Rotate String (E)](LintCode/8_rotate_str.md)
     * [9 - Fizz Buzz (E)](LintCode/9_fizz_buzz.md)
+    * [11 - Search Range in Binary Search Tree (M)](LintCode/11_range_bst.md)
     * [12 - Min Stack (M)](LintCode/12_min_stack.md)
     * [13 - strStr (E)](LintCode/13_strstr.md)
     * [14 - First Position of Target (M)](LintCode/14_first_position.md)
