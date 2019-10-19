@@ -77,6 +77,30 @@ public class Compression {
 <br>
 
 
+### Go
+```go
+func CompressLintCode(originalStr string) string {
+	s := ""
+	l := len(originalStr)
+	for i := 0; i < l; {
+		count, j := 1, i+1
+		for ; j < l && originalStr[j] == originalStr[i]; j++ {
+			count++
+		}
+		s += string(originalStr[i]) + fmt.Sprintf("%d", count)
+		i = j
+	}
+
+	if len(s) >= l {
+		return originalStr
+	}
+	return s
+}
+```
+
+<br>
+
+
 ### Python
 ```python
 class Compress:
