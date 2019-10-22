@@ -283,6 +283,7 @@
     * [1348 - Excel Sheet Column Number (E)](LintCode/1348_excel_cloumn2num.md)
     * [1350 - Excel Sheet Column Title (E)](LintCode/1350_excel_num2title.md)
     * [1360 - Symmetric Tree (E)](LintCode/1360_symmetric_tree.md)
+    * [1380 - Log Sorting (E)](LintCode/1380_log_sort.md)
     * [1394 - Goat Latin](LintCode/1394_goat_latin.md)
     * [1510 - Buddy String (E)](LintCode/1510_buddy_string.md)
     * [1534 - Convert Binary Search Tree to Sorted Doubly Linked List (M)](LintCode/1534_bst_to_doubly_linked_list.md)
