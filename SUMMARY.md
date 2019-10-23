@@ -210,6 +210,7 @@
     * [213 - String Compression (E)](LintCode/213_str_compress.md)
     * [366 - Fibonacci (E)](LintCode/366_fibonacci.md)
     * [372 - Delete Node in a Linked List (E)](LintCode/372_delete_node_linkedlist.md)
+    * [378 - Convert Binary Tree to Doubly Linked List (M)](LintCode/378_convert_bt_dll.md)
     * [382 - Triangle Count (E)](LintCode/382_triangle_count.md)
     * [384 - Longest Substring Without Repeating Characters(M)](LintCode/384_longest_substr_without_repeat_char.md)
     * [389 - Valid Sudoku (E)](LintCode/389_valid_sudoku.md)
