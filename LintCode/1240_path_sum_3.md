@@ -7,7 +7,7 @@
 * Tag: DFS, Binary Tree, Recursion
 * Company: Facebook, Quora, Uber, Amazon
 * Difficulty: Easy
-* Link: https://leetcode.com/problems/path-sum-iii/
+* Link: https://www.lintcode.com/problem/path-sum-iii/description
 
 <br></br>
 
