@@ -153,6 +153,7 @@
     * [905 - Sort Array By Parity I (E)](LeetCode/905_sort_arr_parity1.md)
     * [912 - Sort an Array (M)](LeetCode/912_sort_arr.md)
     * [922 - Sort Array By Parity II (E)](LeetCode/922_sort_arr_parity2.md)
+    * [1120 - Maximum Average Subtree (M)](LeetCode/1120_max_avg_subtree.md)
 
 
 * [LintCode]()
@@ -255,6 +256,7 @@
     * [556 - Standard Bloom Filter (M)](LintCode/556_standard_bloom_filter.md)
     * [585 - Maximum Number in Mountain Sequence (M)](LintCode/585_max_num_mountain.md)
     * [595 - Binary Tree Longest Consecutive Sequence (E)](LintCode/595_longest_consecutive_seq1.md)
+    * [597 - Subtree With Maximum Average (E)](LintCode/597_max_avg_subtree.md)
     * [600 - Smallest Rectangle Enclosing Black Pixels (H)](LintCode/600_smallest_rectangle.md)
     * [614 - Binary Tree Longest Consecutive Sequence II (M)](LintCode/614_longest_consecutive_seq2.md)
     * [619 - Binary Tree Longest Consecutive Sequence III (M)](LintCode/619_longest_consecutive_seq3.md)
