@@ -255,6 +255,7 @@
     * [595 - Binary Tree Longest Consecutive Sequence (E)](LintCode/595_longest_consecutive_seq1.md)
     * [600 - Smallest Rectangle Enclosing Black Pixels (H)](LintCode/600_smallest_rectangle.md)
     * [614 - Binary Tree Longest Consecutive Sequence II (M)](LintCode/614_longest_consecutive_seq2.md)
+    * [619 - Binary Tree Longest Consecutive Sequence III (M)](LintCode/619_longest_consecutive_seq3.md)
     * [633 - Find the Duplicate Number (H)](LintCode/633_find_dulicated_num.go)
     * [637 - Valid Word Abbreviation (E)](LintCode/637_is_abbrevation.md)
     * [646 - First Position Unique Character](LintCode/646_first_pos_unique_char.md)
