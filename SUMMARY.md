@@ -267,6 +267,7 @@
     * [596 - Minimum Subtree (E)](LintCode/596_min_subtree.md)
     * [597 - Subtree With Maximum Average (E)](LintCode/597_max_avg_subtree.md)
     * [600 - Smallest Rectangle Enclosing Black Pixels (H)](LintCode/600_smallest_rectangle.md)
+    * [604 - Window Sum (E)](LintCode/604_win_sum.md)
     * [614 - Binary Tree Longest Consecutive Sequence II (M)](LintCode/614_longest_consecutive_seq2.md)
     * [619 - Binary Tree Longest Consecutive Sequence III (M)](LintCode/619_longest_consecutive_seq3.md)
     * [626 - Rectangle Overlap (E)](LintCode/626_rectangle_overlap.md)
