@@ -332,6 +332,7 @@
     * [1535 - To Lower Case (E)](LintCode/1535_to_lower.md)
     * [1536 - Find First and Last Position of Element in Sorted Array (M)](LintCode/1536_first_last_element.md)
     * [1623 - Minimal Distance In The Array (E)](LintCode/1623_min_distance_arr.md)
+    * [1784 - Decrease To Be Palindrome (E)](LintCode/1784_decrease_to_palindrome.md)
 
 
 * [HackerRank]()
