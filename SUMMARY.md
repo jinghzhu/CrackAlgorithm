@@ -160,6 +160,7 @@
     * [905 - Sort Array By Parity I (E)](LeetCode/905_sort_arr_parity1.md)
     * [912 - Sort an Array (M)](LeetCode/912_sort_arr.md)
     * [922 - Sort Array By Parity II (E)](LeetCode/922_sort_arr_parity2.md)
+    * [1086 - High Five (M)](LeetCode/1086_high_five.md)
     * [1120 - Maximum Average Subtree (M)](LeetCode/1120_max_avg_subtree.md)
 
 
@@ -268,6 +269,7 @@
     * [597 - Subtree With Maximum Average (E)](LintCode/597_max_avg_subtree.md)
     * [600 - Smallest Rectangle Enclosing Black Pixels (H)](LintCode/600_smallest_rectangle.md)
     * [604 - Window Sum (E)](LintCode/604_win_sum.md)
+    * [613 - High Five (M)](LintCode/613_high_five.md)
     * [614 - Binary Tree Longest Consecutive Sequence II (M)](LintCode/614_longest_consecutive_seq2.md)
     * [619 - Binary Tree Longest Consecutive Sequence III (M)](LintCode/619_longest_consecutive_seq3.md)
     * [626 - Rectangle Overlap (E)](LintCode/626_rectangle_overlap.md)
