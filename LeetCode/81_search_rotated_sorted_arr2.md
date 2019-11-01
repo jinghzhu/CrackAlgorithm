@@ -51,23 +51,8 @@ Time complexity:
 
 ### Java
 ```java
-public class GetInRotatedSortedArray2 {
-	public boolean solution1(int[] A, int target) {
-        if (A == null || A.length == 0)
-             return false;
-        for (int i : A)
-            if (i == target)
-                return true;
-        
-        return false;
-    }
-	
-	/**
-     * @param A: an integer rotated sorted array and duplicates are allowed
-     * @param target: An integer
-     * @return: a boolean 
-     */
-    public boolean solution2(int[] A, int target) {
+class Solution {
+    public boolean search(int[] A, int target) {
         if (A == null || A.length == 0)
             return false;
     
@@ -76,22 +61,18 @@ public class GetInRotatedSortedArray2 {
             int mid = low + (high - low) / 2;
             if (A[mid] == target)
                 return true;
-            if (A[low] == A[mid] && A[mid] == A[high]) {
-            	// [0,0,0,1,0]
+            if (A[low] == A[mid] && A[mid] == A[high]) { // [0,0,0,1,0]
                 high--;
-            } else if (A[low] <= A[mid] && A[mid] <= A[high]) {
-            	// low and high in normal case - [0,1,2,...,5,6]
+            } else if (A[low] <= A[mid] && A[mid] <= A[high]) { // low and high in normal case - [0,1,2,...,5,6]
                 if (target < A[mid])
                     high = mid;
                 else
                     low = mid;
-            } else if (A[low] <= A[mid] && A[mid] >= A[high]) {
+            } else if (A[low] <= A[mid]) {
             	// [3,4,...,6,7,0,...,2] low in first half, which is [3,4,...,6], and high in
             	// second half, which is [0,...2]. Assume mid is in first half. Then check 2
             	// cases for target position, in first or second half.
-                if (target > A[mid])
-                    low = mid;
-                else if (A[low] <= target)
+                if (target < A[mid] && target >= A[low])
                     high = mid;
                 else
                     low = mid;
@@ -116,49 +97,41 @@ public class GetInRotatedSortedArray2 {
 
 ### Go
 ```go
-func GetInRotatedSortedArr2(nums []int, target int) bool {
-	if len(nums) < 1 {
-		return false
-	}
-
-	low, high := 0, len(nums)-1
-	for low+1 < high {
-		mid := low + (high-low)/2
-		if nums[mid] == target {
-			return true
-		}
-		if nums[low] == nums[mid] && nums[mid] == nums[high] {
-			// [0,0,0,1,0]
-			high--
-		} else if nums[low] <= nums[mid] && nums[mid] <= nums[high] {
-			// low and high in normal case - [0,1,2,...,5,6]
-			if target < nums[mid] {
-				high = mid
-			} else {
-				low = mid
-			}
-		} else if nums[low] <= nums[mid] && nums[mid] >= nums[high] {
-			// [3,4,...,6,7,0,...,2] low in first half, which is [3,4,...,6], and high in
-			// second half, which is [0,...2]. Assume mid is in first half. Then check 2
-			// cases for target position, in first or second half.
-			if target < nums[mid] && target >= nums[low] {
-				high = mid
-			} else {
-				low = mid
-			}
-		} else {
-			// [3,4,...,6,7,0,...,2] low in first half, which is [3,4,...,6], and high in
-			// second half, which is [0,...2]. Assume mid is in second half. Then check 2
-			// cases for target position, in first or second half.
-			if target > nums[mid] && target <= nums[high] {
-				low = mid
-			} else {
-				high = mid
-			}
-		}
-	}
-
-	return nums[low] == target || nums[high] == target
+func search(nums []int, target int) bool {
+    if len(nums) < 1 {
+        return false
+    }
+    
+    low, high := 0, len(nums) - 1
+    for low + 1 < high{
+        mid := low + (high - low) / 2
+        if nums[mid] == target {
+            return true
+        }
+        if nums[low] == nums[mid] && nums[mid] == nums[high] {
+            high--
+        } else if nums[low] <= nums[mid] && nums[mid] <= nums[high] {
+            if target < nums[mid] {
+                high = mid
+            } else {
+                low = mid
+            }
+        } else if nums[low] <= nums[mid] && nums[mid] >= nums[high] {
+            if target < nums[mid] && target >= nums[low] {
+                high = mid
+            } else {
+                low = mid
+            }
+        } else {
+            if target > nums[mid] && target <= nums[high] {
+                low = mid
+            } else {
+                high = mid
+            }
+        }
+    }
+    
+    return nums[low] == target || nums[high] == target
 }
 ```
 
@@ -171,29 +144,33 @@ class Solution:
     def search(self, nums: List[int], target: int) -> bool:
         if not nums or len(nums) < 1:
             return False
-        
+
         low, high = 0, len(nums) - 1
         while low + 1 < high:
             mid = (low + high) // 2
             if nums[mid] == target:
                 return True
-            if nums[low] == nums[mid] == nums[high]:
+            if nums[low] == nums[mid] == nums[high]:  # [0,0,0,1,0]
                 high -= 1
-            elif nums[low] <= nums[mid] <= nums[high]:
+            elif nums[low] <= nums[mid] <= nums[high]:  # low and high in normal case - [0,1,2,...,5,6]
                 if target > nums[mid]:
                     low = mid
                 else:
                     high = mid
-            elif nums[low] <= nums[mid] and nums[mid] >= nums[high]:
-                if target >= nums[low] and target < nums[mid]:
+            elif nums[mid] >= nums[low] >= nums[high]:
+                # [3,4,...,6,7,0,...,2] low in first half, which is [3,4,...,6], and high in second half, which is
+                # [0,...2]. Assume mid is in first half. Check 2 cases for target position, in first or second half.
+                if nums[low] <= target < nums[mid]:
                     high = mid
                 else:
                     low = mid
             else:
-                if target > nums[mid] and target <= nums[high]:
+                # [3,4,...,6,7,0,...,2] low in first half, which is [3,4,...,6], and high in second half, which is
+                # [0,...2]. Assume mid is in second half. Check 2 cases for target position, in first or second half.
+                if nums[mid] < target <= nums[high]:
                     low = mid
                 else:
                     high = mid
-        
+
         return nums[low] == target or nums[high] == target
 ```
