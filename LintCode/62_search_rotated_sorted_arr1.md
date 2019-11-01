@@ -41,55 +41,52 @@ Output: 4
 
 ## Solution
 ----
+1. 以[4, 5, 1, 2, 3]为例，设[4, 5]为前半段，[1, 2, 3]为后半段。
+2. 按正常取中间值。按如下情况判断下一步low和high：
+    1. 判断当前nums[low]、nums[mid]和nums[high]是否正常，即满足nums[low] < nums[mid] < nums[high]。如果是，按正常二分查找进行。
+    2. 判断mid落在哪一段
+        1. 如果落在前半段，即nums[low] < nums[mid] && nums[mid] > nums[high]
+		    1. 如果target < nums[mid] && target >= nums[low]，说明在mid前，即high = mid。
+			2. 否则说明在mid后，即low = mid。
+		2. 如果落在后半段，即nums[low] > nums[high] && nums[mid] < nums[high]
+			1. 如果target > nums[mid] && target <= nums[high]，说明在mid后，即low = mid。
+			2. 否则说明在mid前，即high = mid。
+
+<br>
+
+
 ### Java
 ```java
-public class GetInRotatedSortedArray1 {
-	/** 
-     *@param A : an integer rotated sorted array
-     *@param target :  an integer to be searched
-     *return : an integer
-     */
-    public int search(int[] A, int target) {
-        if (A == null || A.length == 0)
+class Solution {
+    public int search(int[] nums, int target) {
+        if (nums == null || nums.length < 1)
             return -1;
-        
-        int low = 0, high = A.length - 1;
-        
+        int low = 0, high = nums.length - 1;
         while (low + 1 < high) {
             int mid = low + (high - low) / 2;
-            if (A[mid] == target)
+            if (nums[mid] == target)
                 return mid;
-            // the array between low and high is consisted of two sub-arrays.
-        	// like [0, 1, 2, 3] + [-5, -4, -3, -2]
-            if (A[low] > A[high]) { 
-            	// target and mid in first array, like target = 1, A[mid] = 2
-                if (A[mid] > target && target > A[low])
-                	high = mid;
-                // target and mid in second array, like target = -4, A[mid] = -3
-                else if (A[mid] > target && A[mid] < A[high])
-                	high = mid;
-                // target in 1st, mid in 2nd, like target = 2, A[mid] = -3
-                else if (A[mid] < target && A[mid] < A[high] && A[low] < target)
-                	high = mid;
-                // target and mid in 1st, like target = 3, A[mid] = 2
-                else if (A[mid] < target && A[mid] > A[low])
-                	low = mid;
-                // mid in 1st, target in 2nd, like A[mid] = 2, target = -3
-                else if (A[mid] > target && A[mid] > A[low] && A[high] > target)
-                	low = mid;
-                else // the last case
-                	low = mid;
-            } else { // in this case, the low-high-mid-target are in the ascending array
-                if (A[mid] < target)
+            if (nums[low] < nums[mid] && nums[mid] < nums[high]) {
+                if (nums[mid] > target)
+                    high = mid;
+                else
+                    low = mid;
+            } else if (nums[mid] > nums[low]) {
+                if (target < nums[mid] && target >= nums[low])
+                    high = mid;
+                else
+                    low = mid;
+            } else {
+                if (target > nums[mid] && target <= nums[high])
                     low = mid;
                 else
                     high = mid;
             }
         }
         
-        if (A[low] == target)
+        if (nums[low] == target)
             return low;
-        if (A[high] == target)
+        if (nums[high] == target)
             return high;
         return -1;
     }
@@ -101,52 +98,51 @@ public class GetInRotatedSortedArray1 {
 
 ### Go
 ```go
-func GetInSortedRotatedArr(nums []int, target int) int {
-	l := len(nums)
-	if l == 0 {
-		return -1
-	}
-
-	low, high := 0, l-1
-
-	for low+1 < high {
-		mid := low + (high-low)/2
-		if nums[mid] == target {
-			return mid
-		}
-		if nums[low] <= nums[mid] && nums[mid] <= nums[high] {
-			if nums[mid] < target {
-				low = mid
-			} else {
-				high = mid
-			}
-		} else if nums[low] <= nums[mid] && nums[high] <= nums[low] {
-			if nums[mid] < target {
-				low = mid
-			} else if nums[low] <= target { // important
-				high = mid
-			} else { // important
-				low = mid
-			}
-		} else {
-			if nums[mid] > target {
-				high = mid
-			} else if target <= nums[high] { // important
-				low = mid
-			} else { // important
-				high = mid
-			}
-		}
-	}
-
-	if nums[low] == target {
-		return low
-	}
-	if nums[high] == target {
-		return high
-	}
-	return -1
+/**
+ * @param A: an integer rotated sorted array
+ * @param target: an integer to be searched
+ * @return: an integer
+ */
+func search (nums []int, target int) int {
+    low, high, l := 0, len(nums) - 1, len(nums)
+    if l < 1 {
+        return -1
+    }
+    for low + 1 < high {
+        mid := low + (high - low) / 2
+        if nums[mid] == target {
+            return mid
+        }
+        if nums[low] < nums[mid] && nums[mid] < nums[high] {
+            if nums[mid] < target {
+                low = mid
+            } else {
+                high = mid
+            }
+        } else if nums[mid] > nums[low] {
+            if target < nums[mid] && target >= nums[low] {
+                high = mid
+            } else {
+                low = mid
+            }
+        } else {
+            if target > nums[mid] && target <= nums[high] {
+                low = mid
+            } else {
+                high = mid
+            }
+        }
+    }
+    
+    if nums[low] == target {
+        return low
+    }
+    if nums[high] == target {
+        return high
+    }
+    return -1
 }
+
 ```
 
 <br>
@@ -155,31 +151,32 @@ func GetInSortedRotatedArr(nums []int, target int) int {
 ### Python
 ```python
 class Solution:
-    def search(self, nums: List[int], target: int) -> int:
+    """
+    @param A: an integer rotated sorted array
+    @param target: an integer to be searched
+    @return: an integer
+    """
+    def search(self, nums, target):
         if not nums or len(nums) < 1:
             return -1
         
         low, high = 0, len(nums) - 1
         while low + 1 < high:
-            mid = (low + high) // 2
+            mid = low + (high - low) // 2
             if nums[mid] == target:
                 return mid
-            if nums[low] <= nums[mid] <= nums[high]:
-                if nums[mid] < target:
-                    low = mid
-                else:
+            if nums[low] < nums[mid] < nums[high]:
+                if nums[mid] > target:
                     high = mid
-            elif nums[low] <= nums[mid] and nums[high] <= nums[mid]:
-                if nums[mid] < target:
+                else:
                     low = mid
-                elif nums[low] <= target:
+            elif nums[low] < nums[mid]:
+                if nums[low] <= target < nums[mid]:
                     high = mid
                 else:
                     low = mid
             else:
-                if target < nums[mid]:
-                    high = mid
-                elif target <= nums[high]:
+                if nums[mid] < target <= nums[high]:
                     low = mid
                 else:
                     high = mid
@@ -189,4 +186,5 @@ class Solution:
         if nums[high] == target:
             return high
         return -1
+
 ```
