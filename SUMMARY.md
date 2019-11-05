@@ -241,6 +241,7 @@
     * [209 - First Unique Character in a String (E)](LintCode/209_first_unique_char_str.md)
     * [213 - String Compression (E)](LintCode/213_str_compress.md)
     * [366 - Fibonacci (E)](LintCode/366_fibonacci.md)
+    * [370 - Convert Expression to Reverse Polish Notation (M)](LintCode/370_convert_exp_to_polish.md)
     * [372 - Delete Node in a Linked List (E)](LintCode/372_delete_node_linkedlist.md)
     * [378 - Convert Binary Tree to Doubly Linked List (M)](LintCode/378_convert_bt_dll.md)
     * [382 - Triangle Count (E)](LintCode/382_triangle_count.md)
