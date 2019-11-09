@@ -8,7 +8,7 @@
 * Tag: Linked List, Two Pointers
 * Difficulty: Easy
 * Company: Microsoft
-* Link: https://leetcode.com/problems/middle-of-the-linked-list/
+* Link: https://www.lintcode.com/problem/middle-of-the-linked-list/description
 
 <br></br>
 
