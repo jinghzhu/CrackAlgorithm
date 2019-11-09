@@ -1,4 +1,4 @@
-# <center>414 - Third Maximum Number (E)</center> 
+# <center>1250 - Third Maximum Number (E)</center> 
 
 
 
@@ -8,7 +8,7 @@
 * Author: Jinghua Zhu <jhzhu@outlook.com>
 * Difficulty: Easy
 * Company: Facebook, Amazon, Microsoft, Google
-* Link: https://leetcode.com/problems/third-maximum-number/
+* Link: https://www.lintcode.com/problem/third-maximum-number/description
 
 <br></br>
 
