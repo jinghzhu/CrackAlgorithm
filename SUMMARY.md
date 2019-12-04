@@ -285,6 +285,7 @@
     * [556 - Standard Bloom Filter (M)](LintCode/556_standard_bloom_filter.md)
     * [569 - Add Digits (E)](LintCode/569_add_digits.md)
     * [585 - Maximum Number in Mountain Sequence (M)](LintCode/585_max_num_mountain.md)
+    * [586 - Sqrt(x) II (M)](LintCode/586_sqrt2.md)
     * [595 - Binary Tree Longest Consecutive Sequence (E)](LintCode/595_longest_consecutive_seq1.md)
     * [596 - Minimum Subtree (E)](LintCode/596_min_subtree.md)
     * [597 - Subtree With Maximum Average (E)](LintCode/597_max_avg_subtree.md)
