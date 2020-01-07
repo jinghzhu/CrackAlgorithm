@@ -285,6 +285,7 @@
     * [480 - Binary Tree Paths (E)](LintCode/480_btree_path.md)
     * [491 - Palindrome Number (E)](LintCode/491_palindrome_num.md)
     * [512 - Decode Ways (M)](LintCode/512_decode_ways.md)
+    * [526 - Load Balancer (M)](LintCode/526_lb.md)
     * [547 - Intersection of Two Arrays (E)](LintCode/547_intersection_arrays.md)
     * [548 - Intersection of Two Arrays II (E)](LintCode/548_intersection_arrays2.md)
     * [556 - Standard Bloom Filter (M)](LintCode/556_standard_bloom_filter.md)
