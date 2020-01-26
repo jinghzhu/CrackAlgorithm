@@ -329,6 +329,7 @@
     * [720 - Rearrange a String With Integers (E)](LintCode/720_rearrange_str.md)
     * [772 - Group Anagrams (M)](LintCode/772_group_anagrams.md)
     * [760 - Binary Tree Right Side View (M)](LintCode/760_right_view.md)
+    * [794 - Sliding Puzzle II (H)](LintCode/794_sliding_puzzle2.md)
     * [796 - Open The Lock (H)](LintCode/796_open_lock.md)
     * [822 - Reverse Order Storage (E)](LintCode/822_reverse_order_storage.md)
     * [835 - Hamming Distance (E)](LintCode/835_hamming_distance.md)
