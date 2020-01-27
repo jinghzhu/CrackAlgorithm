@@ -216,6 +216,7 @@
     * [83 - Single Number II (M)](LintCode/83_single_num2.md)
     * [84 - Single Number III (M)](LintCode/84_single_num3.md)
     * [86 - Binary Search Tree Iterator (H)](LintCode/86_bst_iterator.md)
+    * [87 - Remove Node in Binary Search Tree (H)](LintCode/87_bst_remove_node.md)
     * [88 - Lowest Common Ancestor of a Binary Tree (M)](LintCode/88_lca.md)
     * [93 - Balanced Binary Tree (E)](LintCode/93_is_balanced_tree.md)
     * [94 - Binary Tree Maximum Path Sum (M)](LintCode/94_max_path_sum.md)
