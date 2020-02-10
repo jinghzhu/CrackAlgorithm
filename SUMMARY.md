@@ -343,6 +343,7 @@
     * [648 - Unique Word Abbreviation (M)](LintCode/648_unique_word_abbr.md)
     * [649 - Binary Tree Upside Down (M)](LintCode/649_bt_upside_down.md)
     * [650 - Find Leaves of Binary Tree (M)](LintCode/650_find_leaves.md)
+    * [652 - Factorization (M)](LintCode/652_factorization.md)
     * [654 - Sparse Matrix Multiplication (M)](LintCode/654_sparse_matrix_multiplication.md)
     * [661 - Convert BST to Greater Tree (E)](LintCode/661_convert_bst_to_greater_tree.md)
     * [663 - Walls and Gates (M)](LintCode/663_walls_gates.md)
