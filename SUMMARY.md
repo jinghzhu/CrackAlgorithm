@@ -366,6 +366,7 @@
     * [669 - Coin Change (M)](LintCode/669_coin1.md)
     * [702 - Concatenated String with Uncommon Characters of Two Strings (E)](LintCode/702_concate_uncommond_chars.md)
     * [720 - Rearrange a String With Integers (E)](LintCode/720_rearrange_str.md)
+    * [730 - Sum of All Subsets (E)](LintCode/730_sum_all_subsets.md)
     * [772 - Group Anagrams (M)](LintCode/772_group_anagrams.md)
     * [760 - Binary Tree Right Side View (M)](LintCode/760_right_view.md)
     * [794 - Sliding Puzzle II (H)](LintCode/794_sliding_puzzle2.md)
