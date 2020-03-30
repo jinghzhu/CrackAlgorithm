@@ -211,6 +211,7 @@
     * [973 - K Closest Points to Origin (M)](LeetCode/973_k_closet_points_origin.md)
     * [1086 - High Five (M)](LeetCode/1086_high_five.md)
     * [1120 - Maximum Average Subtree (M)](LeetCode/1120_max_avg_subtree.md)
+    * [1269 - Number of Ways to Stay in the Same Place After Some Steps (H)](LeetCode/1269_num_ways_stay_same.md)
 
 
 * [LintCode]()
@@ -442,6 +443,7 @@
     * [1609 - Middle of the Linked List (E)](LintCode/1609_middle_ll.md)
     * [1623 - Minimal Distance In The Array (E)](LintCode/1623_min_distance_arr.md)
     * [1784 - Decrease To Be Palindrome (E)](LintCode/1784_decrease_to_palindrome.md)
+    * [1835 - Number of Ways to Stay in the Same Place After Some Steps (E)](LintCode/1835_num_ways_stay_same.md)
 
 
 * [HackerRank]()
