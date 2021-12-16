@@ -93,3 +93,29 @@ func GetRoomDistance2(rooms *[][]int) {
 	}
 }
 ```
+
+### Python
+```python
+from collections import deque
+
+class Solution:
+    """
+    @param rooms: m x n 2D grid
+    @return: nothing
+    """
+    def wallsAndGates(self, matrix):
+        neighbors = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+        q = deque([])
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
+                if matrix[i][j] == 0:
+                    q.append((i, j))
+        while len(q) > 0:
+            node = q.popleft()
+            for neighbor in neighbors:
+                new_x, new_y = node[0] + neighbor[0], node[1] + neighbor[1]
+                if new_x >= 0 and new_x < len(matrix) and new_y >= 0 and new_y < len(matrix[0]) and (matrix[new_x][new_y] == 2147483647 or matrix[new_x][new_y] > matrix[node[0]][node[1]] + 1):
+                    matrix[new_x][new_y] = matrix[node[0]][node[1]] + 1
+                    q.append((new_x, new_y))
+        return matrix
+```
