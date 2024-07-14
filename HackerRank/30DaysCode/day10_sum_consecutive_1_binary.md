@@ -14,7 +14,6 @@
 
 
 ## Description
-----
 Given a base-10 integer n, finds the base-10 integer denoting the maximum number of consecutive 1's in n's binary representation.
 
 <br></br>
@@ -22,7 +21,6 @@ Given a base-10 integer n, finds the base-10 integer denoting the maximum number
 
 
 ## Example
-----
 1. Input - 5 Output - 1
  2. Input - 13 Output - 2
 
@@ -31,7 +29,6 @@ Given a base-10 integer n, finds the base-10 integer denoting the maximum number
 
 
 ## Solution
-----
 ### Go
 ```go
 func SumConsecutive1Binary(x uint64) int {
