@@ -14,7 +14,6 @@
 
 
 ## Description
-----
 Given a binary search tree and a range [k1, k2], return node values within a given range in ascending order.
 
 <br></br>
@@ -22,7 +21,6 @@ Given a binary search tree and a range [k1, k2], return node values within a giv
 
 
 ## Example
-----
 If k1 = 10 and k2 = 22, then should return [12, 20, 22].
 ```
  	    20
@@ -37,7 +35,6 @@ If k1 = 10 and k2 = 22, then should return [12, 20, 22].
 
 
 ## Solution
-----
 可利用BST中序有序规则减少遍历的节点：
 - 如果是非递归，可利用小于`k1`，搜索右子树（大于`k2`，搜索左子树）减少压栈范围。
 - 如果是递归，不能像非递归那样，否则会绕过去。比如上述例子，如果`k1 = 7`且`k2 = 13`，8在[7, 12]中，不能简单的比较`n.val < k1`或`n.val > k2`。
@@ -181,7 +178,6 @@ func GetRange2(root *TreeNode, k1 int, k2 int) []int {
 
 
 ### Python
-----
 ```python
 class GetRange:
     """
