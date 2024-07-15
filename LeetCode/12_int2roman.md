@@ -1,4 +1,4 @@
-# <center>12 - Integer to Roman (M)</center> 
+# <center>12 - Integer to Roman (M)</center>
 
 
 
@@ -14,7 +14,6 @@
 
 
 ## Description
-----
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
 ```
@@ -43,7 +42,6 @@ Given an integer, convert it to a roman numeral. Input is guaranteed to be withi
 
 
 ## Example
-----
 ```
 Input: 58
 Output: "LVIII"
@@ -61,7 +59,6 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 
 ## Solution
-----
 ### Python
 ```python
 class Solution:
