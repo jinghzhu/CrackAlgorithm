@@ -5,6 +5,7 @@
 
 * [Algorithm](Algorithm/algorithm.md)
     * [Computational Complexity](Algorithm/computational_complexity.md)
+    * [Numerical Encoding](Algorithm/numerical_encoding.md)
 
 
 * [LeetCode]()

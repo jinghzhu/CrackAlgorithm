@@ -1,6 +1,15 @@
 <h1 style="text-align: center;"><strong>Algorithm</strong></h1>
 
+- [基本数据类型](#基本数据类型)
+- [尾递归](#尾递归)
+- [References](#references)
+
 <br></br>
+
+
+
+# 基本数据类型
+
 
 # 尾递归
 如果函数在返回前最后一步才递归调用，则该函数可被编译器或解释器优化，使其在空间效率上与迭代相当。这种情况被称为尾递归（tail recursion）。
@@ -43,5 +52,5 @@ func tailRecur(n int, res int) int {
 
 
 
-## References
+# References
 * [Hello Algorithm](hello-algo.com)
