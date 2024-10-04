@@ -8,8 +8,32 @@
 首先，**数字是以补码形式存储在计算机中**。。
 
 - **原码 Sign-magnitude**：将数字二进制表示的最高位视为符号位，其中$0$表示正数，$1$表示负数，其余位表示数字值。The highest bit of a binary representation of a number is considered as sign bit, where 0 represents a positive number and 1 represents a negative number. The remaining bits represent the value of the number.
+
+    表示方法：符号位加上真值的绝对值，即第一位表示符号，其余表示值。
+    
+    比如8位二进制：
+    * [+1]原 = 0000 0001
+    * [-1]原 = 1000 0001
+
 - **反码 One's complement**：正数的反码与其原码相同，负数的反码是对其原码除符号位外的所有位取反。The one's complement of a positive number is the same as its sign-magnitude. For negative numbers, it's obtained by inverting all bits except the sign bit.
+
+    表示方法：
+    1. 正数反码是其本身。
+    2. 负数反码是在其原码基础上，符号位不，其余各位取反.
+
+    比如：
+    * [+1] = [00000001]原 = [00000001]反
+    * [-1] = [10000001]原 = [11111110]反
+
 - **补码 Two's complement**：正数的补码与其原码相同，负数的补码是在其反码的基础上加$1$ 。The two's complement of a positive number is the same as its sign-magnitude. For negative numbers, it's obtained by adding 1 to their one's complement.
+
+    表示方法：
+    1. 正数补码是本身。
+    2. 负数补码是在原码基础上，符号位不变，其余各位取反，最后+1。即在反码基础上+1。
+
+    比如：
+    * [+1] = [00000001]原 = [00000001]反 = [00000001]补
+    * [-1] = [10000001]原 = [11111110]反 = [11111111]补
 
 ![Conversions between sign-magnitude, one's complement, and two's complement](Images/numerical_encoding1.png)
 
@@ -72,6 +96,32 @@ $$
 $$
 
 请注意，上述所有计算都是加法，即**计算机内部硬件电路主要是基于加法运算设计，通过将加法与一些基本逻辑运算结合，实现其他运算**。现在可总结使用补码原因：基于补码表示，可用同样电路和操作处理正负数加法，且无须特别处理正负零问题。
+
+<br>
+
+
+## 负数运算
+将符号位参与运算，且只保留加法的方法。先看原码：
+
+```
+1 – 1 = 1 + (-1) = [00000001]原 + [10000001]原 = [10000010]原 = -2
+```
+
+如果用原码，让符号位也参与计算，减法结果是不正确的。为解决原码减法问题，出现了反码：
+
+```
+1 – 1 = 1 + (-1) = [0000 0001]原 + [1000 0001]原= [0000 0001]反 + [1111 1110]反 = [1111 1111]反 = [1000 0000]原 = -0
+```
+
+用反码计算减法，结果真值部分正确，但会有`[0000 0000]原`和`[1000 0000]原`两个编码表示0.于是补码出现，解决0符号及两个编码问题：
+
+```
+1 – 1 = 1 + (-1) = [0000 0001]原 + [1000 0001]原 = [0000 0001]补 + [1111 1111]补 = [0000 0000]补 = [0000 0000]原
+```
+
+这样0用`[0000 0000]`表示，而以前出现问题的`-0`则不存在，且可用`[1000 0000]`表示-128。
+
+使用补码，一是为防止0有2个编码，其次把减法用加法表示，达到简化电路作用，且还能多表示一个最低数。这就是为什么8位二进制，原码或反码表示范围为`[-127, +127]`，而补码表示范围为`[-128, 127]`。
 
 <br></br>
 
