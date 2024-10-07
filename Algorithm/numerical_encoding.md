@@ -1,5 +1,9 @@
 <h1 style="text-align: center;"><strong>Numerical Encoding</strong></h1>
 
+- [整数编码 Integer Encoding - 原码/反码/补码 Sign-magnitude/One's complement/Two's complement](#整数编码-integer-encoding---原码反码补码-sign-magnitudeones-complementtwos-complement)
+  - [负数运算](#负数运算)
+- [浮点数编码](#浮点数编码)
+
 <br></br>
 
 
@@ -10,14 +14,14 @@
 - **原码 Sign-magnitude**：将数字二进制表示的最高位视为符号位，其中$0$表示正数，$1$表示负数，其余位表示数字值。The highest bit of a binary representation of a number is considered as sign bit, where 0 represents a positive number and 1 represents a negative number. The remaining bits represent the value of the number.
 
     表示方法：符号位加上真值的绝对值，即第一位表示符号，其余表示值。
-    
+
     比如8位二进制：
     * [+1]原 = 0000 0001
     * [-1]原 = 1000 0001
 
 - **反码 One's complement**：正数的反码与其原码相同，负数的反码是对其原码除符号位外的所有位取反。The one's complement of a positive number is the same as its sign-magnitude. For negative numbers, it's obtained by inverting all bits except the sign bit.
 
-    表示方法：
+    表示方法
     1. 正数反码是其本身。
     2. 负数反码是在其原码基础上，符号位不，其余各位取反.
 

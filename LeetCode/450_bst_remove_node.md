@@ -1,4 +1,4 @@
-<h1 style="text-align: center;"><strong>87 - Remove Node in BST</strong></h1>
+<h1 style="text-align: center;"><strong>450 - Delete Node in BST</strong></h1>
 
 - [Description](#description)
 - [Example](#example)
@@ -16,7 +16,7 @@ Given root node reference of BST and key, delete node with given key in BST. Eac
 
 * Tag: Tree, Binary Tree, BST, Divide and Conquer
 * Difficulty: Difficulty
-* Link: https://www.lintcode.com/problem/87/description
+* Link: https://leetcode.com/problems/delete-node-in-a-bst/description/
 
 <br></br>
 

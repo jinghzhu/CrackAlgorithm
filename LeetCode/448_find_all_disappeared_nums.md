@@ -1,4 +1,4 @@
-# <center>448 - Find All Numbers Disappeared in an Array (E)</center> 
+# <center>448 - Find All Numbers Disappeared in an Array (E)</center>
 
 
 
@@ -14,7 +14,6 @@
 
 
 ## Description
-----
 Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 
 Find all the elements of [1, n] inclusive that do not appear in this array.
@@ -24,7 +23,6 @@ Find all the elements of [1, n] inclusive that do not appear in this array.
 
 
 ## Example
-----
 Input: [4,3,2,7,8,2,3,1]
 
 Output: [5,6]
@@ -34,7 +32,6 @@ Output: [5,6]
 
 
 ## Solution
-----
 ### Java
 ```java
 public class FindAllNumDisappearedInArr {
@@ -52,7 +49,6 @@ public class FindAllNumDisappearedInArr {
         for (int i = 0; i < visited.length; i++)
             if (visited[i] != -1)
                 res.add(i + 1);
-        
         return res;
     }
 }
