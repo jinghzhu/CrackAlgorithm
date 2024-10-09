@@ -1,8 +1,16 @@
-# <center>698 - Partition to K Equal Sum Subsets (M)</center> 
+<h1 style="text-align: center;"><strong>698 - Partition to K Equal Sum Subsets (M)</strong></h1>
 
-
+- [Description](#description)
+- [Example](#example)
+- [Solution](#solution)
+	- [Go](#go)
 
 <br></br>
+
+
+
+# Description
+Given an array of integers nums and a positive integer k, find whether it's possible to divide this array into k non-empty subsets whose sums are all equal.
 
 * Tag: DFS, Backtracking, Recursion
 * Difficulty: Medium
@@ -13,16 +21,7 @@
 
 
 
-## Description
-----
-Given an array of integers nums and a positive integer k, find whether it's possible to divide this array into k non-empty subsets whose sums are all equal.
-
-<br></br>
-
-
-
-## Example
-----
+# Example
 Input: nums = [4, 3, 2, 3, 5, 2, 1], k = 4
 
 Output: True
@@ -33,8 +32,7 @@ It's possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal s
 
 
 
-## Solution
-----
+# Solution
 1. 使用DFS搜索符合要求的组合。
 2. 引入哈希visited，标记哪些元素已被使用。
 3. 引入变量start标记当前递归从哪个位置开始搜索。
@@ -44,7 +42,7 @@ It's possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal s
 <br>
 
 
-### Go
+## Go
 ```go
 func IsPartitionKSubsets(nums []int, k int) bool {
 	l := len(nums)

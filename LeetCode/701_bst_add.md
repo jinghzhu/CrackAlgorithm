@@ -1,10 +1,21 @@
-# <center>701 - Insert into a Binary Search Tree (M)</center> 
+<h1 style="text-align: center;"><strong>701 - Insert into a Binary Search Tree (M)</strong></h1>
 
-
+- [Description](#description)
+- [Example](#example)
+- [Solution](#solution)
+  - [Go](#go)
+  - [Java](#java)
+  - [Python](#python)
 
 <br></br>
 
-* Author: Jinghua Zhu <jhzhu@outlook.com>
+
+
+# Description
+Given the root node of a binary search tree (BST) and a value to be inserted into the tree, insert the value into the BST. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST.
+
+Note that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after insertion. You can return any of them.
+
 * Tag: BST, Recursion
 * Difficulty: Medium
 * Link: https://leetcode.com/problems/insert-into-a-binary-search-tree/
@@ -13,18 +24,7 @@
 
 
 
-## Description
-----
-Given the root node of a binary search tree (BST) and a value to be inserted into the tree, insert the value into the BST. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST.
-
-Note that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after insertion. You can return any of them.
-
-<br></br>
-
-
-
-## Example
-----
+# Example
 Given the tree:
 
 ```
@@ -53,7 +53,7 @@ This tree is also valid:
          5
        /   \
       2     7
-     / \   
+     / \
     1   3
          \
           4
@@ -63,9 +63,8 @@ This tree is also valid:
 
 
 
-## Solution
-----
-### Go
+# Solution
+## Go
 ```go
 func InsertIntoBST1(root *TreeNode, val int) *TreeNode {
 	target := &TreeNode{
@@ -123,7 +122,7 @@ func iiBST2Helper(root *TreeNode, val int) *TreeNode {
 <br>
 
 
-### Java
+## Java
 ```java
 public class AddNode {
 	public TreeNode solution1(TreeNode root, TreeNode node) {
@@ -150,16 +149,14 @@ public class AddNode {
         }
         return root;
     }
-	
+
 	public TreeNode solution2(TreeNode root, TreeNode node) {
         if (root == null)
             return node;
- 
         if (root.val > node.val)
             root.left = solution2(root.left, node);
         else
-            root.right = solution2(root.right, node);
-   
+            root.right = solution2(root.right, node)
         return root;
     }
 }
@@ -168,7 +165,7 @@ public class AddNode {
 <br>
 
 
-### Python
+## Python
 ```python
 class AddNode:
     def solution(self, root, node):
