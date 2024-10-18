@@ -7,6 +7,7 @@
     * [Computational Complexity](Algorithm/computational_complexity.md)
     * [Numerical Encoding](Algorithm/numerical_encoding.md)
     * [Hash](Algorithm/hash.md)
+    * [Sort](Algorithm/sort.md)
 
 
 * [LeetCode]()
