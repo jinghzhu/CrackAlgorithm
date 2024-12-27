@@ -9,6 +9,7 @@
     * [Hash](Algorithm/hash.md)
     * [Tree](Algorithm/tree.md)
         * [AVL](Algorithm/avl.md)
+    * [Heap](Algorithm/heap.md)
     * [Graph](Algorithm/graph.md)
     * [Sort](Algorithm/sort.md)
 
