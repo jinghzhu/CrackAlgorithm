@@ -7,6 +7,9 @@
     * [Computational Complexity](Algorithm/computational_complexity.md)
     * [Numerical Encoding](Algorithm/numerical_encoding.md)
     * [Hash](Algorithm/hash.md)
+    * [Tree](Algorithm/tree.md)
+        * [AVL](Algorithm/avl.md)
+    * [Graph](Algorithm/graph.md)
     * [Sort](Algorithm/sort.md)
 
 

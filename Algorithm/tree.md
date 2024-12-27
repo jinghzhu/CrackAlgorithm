@@ -104,3 +104,7 @@ func (bst *binarySearchTree) remove(num int) {
     }
 }
 ```
+
+<br></br>
+
+
