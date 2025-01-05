@@ -11,6 +11,7 @@
         * [AVL](Algorithm/avl.md)
     * [Heap](Algorithm/heap.md)
     * [Graph](Algorithm/graph.md)
+    * [Search](Algorithm/search.md)
     * [Sort](Algorithm/sort.md)
 
 

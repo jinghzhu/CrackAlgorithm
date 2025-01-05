@@ -1,18 +1,24 @@
-<h1 style="text-align: center;"><strong>Binary Search</strong></h1>
+<h1 style="text-align: center;"><strong>Search</strong></h1>
 
 <br></br>
 
 
 
-# 二分查找
-方法一：
+# Binary Search
+先初始化`i, j = 0, n - 1`，代表搜索区间$[0, n - 1]$。循环执行：
+1. 计算中点索引$m = \lfloor {(i + j) / 2} \rfloor$，其中$\lfloor \: \rfloor$表示向下取整。
+2. 判断`nums[m]` 和 `target`大小关系：
+    1. `nums[m] < target`，说明`target`在$[m + 1, j]$，执行`i = m + 1`。
+    2. `nums[m] > target`，说明`target`在$[i, m - 1]$，执行`j = m - 1`。
+    3. 找到`target`，返回索引$m$ 。
+
+* 时间复杂度$O(\log n)$：区间每轮缩小一半，因此循环次数为$\log_2 n$。
+* 空间复杂度为$O(1)$
 
 ```go
 func binarySearch(nums []int, target int) int {
-    // 初始化双闭区间 [0, n-1] ，即 i, j 分别指向数组首元素、尾元素
     i, j := 0, len(nums)-1
-    // 循环，当搜索区间为空时跳出（当 i > j 时为空）
-    for i <= j {
+    for i <= j { // 双闭区间
         m := i + (j-i)/2      // 计算中点索引 m
         if nums[m] < target { // 此情况说明 target 在区间 [m+1, j] 中
             i = m + 1
@@ -27,23 +33,23 @@ func binarySearch(nums []int, target int) int {
 }
 ```
 
-方法二：
+除双闭区间，区间表示还有“左闭右开”，$[0, n)$，即左边界包含自身，右边界不包含。在该表示下，$[i, j)$在`i = j`时为空。
 
 ```go
-func binarySearch(nums []int, target int) int {
-    // 初始化左闭右开区间 [0, n) ，即 i, j 分别指向数组首元素、尾元素+1
+/* 二分查找（） */
+func binarySearchLCRO(nums []int, target int) int {
     i, j := 0, len(nums)
-    // 循环，当搜索区间为空时跳出（当 i = j 时为空）
-    for i < j {
+    for i < j { // 左闭右开区间
         m := i + (j-i)/2
-        if nums[m] < target { // 此情况说明 target 在区间 [m+1, j) 中
+        if nums[m] < target {
             i = m + 1
-        } else if nums[m] > target { // 此情况说明 target 在区间 [i, m) 中
+        } else if nums[m] > target {
             j = m
         } else {
             return m
         }
     }
+
     return -1
 }
 ```
