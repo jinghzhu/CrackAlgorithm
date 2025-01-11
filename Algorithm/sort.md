@@ -1,5 +1,18 @@
 <h1 style="text-align: center;"><strong>Sort</strong></h1>
 
+- [Selection Sort](#selection-sort)
+- [Bubble Sort](#bubble-sort)
+  - [效率优化](#效率优化)
+- [Insertion Sort](#insertion-sort)
+  - [插入排序优势](#插入排序优势)
+- [Quick Sort](#quick-sort)
+  - [基准数优化](#基准数优化)
+  - [尾递归优化](#尾递归优化)
+- [Merge Sort](#merge-sort)
+- [Heap Sort](#heap-sort)
+- [Bucket Sort](#bucket-sort)
+  - [实现平均分配桶](#实现平均分配桶)
+
 <br></br>
 
 
@@ -231,3 +244,114 @@ func mergeSort(nums []int, left, right int) {
     merge(nums, left, mid, right)
 }
 ```
+
+<br></br>
+
+
+
+# Heap Sort
+设数组的长度为n：
+1. 输入数组并建立大顶堆。
+2. 将堆顶元素（第一个元素）与堆底元素（最后一个元素）交换。完成交换后，堆的长度减1，已排序元素数量加1。
+3. 从堆顶元素开始，从顶到底执行堆化操作（sift down）。完成堆化后，堆的性质得到修复。
+4. 循环执行第2和第3步。循环n-1轮完成排序。
+
+![](./Images/heap_sort1.png)
+![](./Images/heap_sort2.png)
+![](./Images/heap_sort3.png)
+
+```go
+// 堆的长度为n，从节点i开始，从顶至底堆化
+func siftDown(nums *[]int, n, i int) {
+    for true {
+        // 判断节点 i, l, r 中值最大的节点，记为 ma
+        l, r, ma := 2*i + 1, 2*i + 2, i
+        if l < n && (*nums)[l] > (*nums)[ma] {
+            ma = l
+        }
+        if r < n && (*nums)[r] > (*nums)[ma] {
+            ma = r
+        }
+        // 若节点 i 最大或索引 l, r 越界，则无须继续堆化，跳出
+        if ma == i {
+            break
+        }
+        // 交换两节点
+        (*nums)[i], (*nums)[ma] = (*nums)[ma], (*nums)[i]
+        // 循环向下堆化
+        i = ma
+    }
+}
+
+func heapSort(nums *[]int) {
+    // 建堆操作：堆化除叶节点以外的其他所有节点
+    for i := len(*nums)/2 - 1; i >= 0; i-- {
+        siftDown(nums, len(*nums), i)
+    }
+    // 从堆中提取最大元素，循环n-1轮
+    for i := len(*nums) - 1; i > 0; i-- {
+        // 交换根节点与最右叶节点（交换首元素与尾元素）
+        (*nums)[0], (*nums)[i] = (*nums)[i], (*nums)[0]
+        // 以根节点为起点，从顶至底进行堆化
+        siftDown(nums, i, 0)
+    }
+}
+```
+
+- 时间复杂度$O(n \log n)$、非自适应排序：建堆使用$O(n)$时间。从堆提取最大元素时间复杂度为$O(\log n)$，循环$n - 1$轮。
+- 空间复杂度$O(1)$、原地排序
+- 非稳定排序：在交换堆顶和堆底元素时，相等元素相对位置可能发生变化。
+
+<br></br>
+
+
+
+# Bucket Sort
+前述排序属于“基于比较”，此类算法时间复杂度无法超越$O(n \log n)$。桶排序属于“非比较排序算法”，时间复杂度可达到线性阶。它是分治策略的应用。通过设置有大小顺序的桶，每个桶对应一个数据范围，将数据平均分配到各个桶中，然后，在每个桶内部排序，最终按照桶顺序合并。
+
+考虑长$n$数组，其元素是$[0, 1)$内的浮点数。桶排序流程如下：
+1. 初始化$k$个桶，将$n$个元素分配到$k$个桶中。
+2. 对每个桶排序。
+3. 按照桶从小到大顺序合并。
+
+！[](./Images/bucket_sort.png)
+
+```go
+func bucketSort(nums []float64) {
+    k := len(nums) / 2 // 初始化 k = n/2 个桶，预期向每个桶分配 2 个元素
+    buckets := make([][]float64, k)
+    for i := 0; i < k; i++ {
+        buckets[i] = make([]float64, 0)
+    }
+    // 1. 将数组元素分配到各个桶中
+    for _, num := range nums {
+        i := int(num * float64(k)) // 输入数据范围为 [0, 1)，使用 num * k 映射到索引范围 [0, k-1]
+        buckets[i] = append(buckets[i], num) // 将 num 添加进桶 i
+    }
+    // 2. 对各个桶执行排序
+    for i := 0; i < k; i++ {
+        sort.Float64s(buckets[i]) // 使用内置切片排序函数，也可以替换成其他排序算法
+    }
+    // 3. 遍历桶合并结果
+    i := 0
+    for _, bucket := range buckets {
+        for _, num := range bucket {
+            nums[i] = num
+            i++
+        }
+    }
+}
+```
+
+桶排序适用体量很大的数据。例如，数据含100万个元素，内存无法一次加载所有数据。可将数据分成1000个桶，分别对每个桶排序，最后将结果合并。
+
+- 时间复杂度平均$O(n + k)$，最差$O(n^2)$：假设元素在各个桶内平均分布，那么每个桶内元素数量为$\frac{n}{k}$。假设排序单个桶使用$O(\frac{n}{k} \log\frac{n}{k})$，则排序所有桶使用$O(n \log\frac{n}{k})$。当桶数量$k$较大，时间复杂度趋于$O(n)$。合并结果时需遍历所有桶和元素，花费$O(n + k)$时间。最差情况，所有数据分配到一个桶，且排序该桶使用$O(n^2)$时间。
+- 空间复杂度为O(n + k)$、非原地排序：需借助$k$个桶和共$n$个元素额外空间。
+- 是否稳定取决于排序桶内元素算法是否稳定。
+
+<br>
+
+
+## 实现平均分配桶
+时间复杂度理论上可达到$O(n)$，关键在于将元素均匀分配到各个桶。为实现平均分配，可先设定大致分界线，将数据粗略分到3个桶。分配完毕后，再将元素较多的桶继续分为3个桶，直至所有桶中的元素数量大致相等。本质上是创建一棵递归树，让叶节点值尽可能平均。
+
