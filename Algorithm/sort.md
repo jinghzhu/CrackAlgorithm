@@ -12,6 +12,8 @@
 - [Heap Sort](#heap-sort)
 - [Bucket Sort](#bucket-sort)
   - [实现平均分配桶](#实现平均分配桶)
+- [Counting Sort](#counting-sort)
+  - [完整实现](#完整实现)
 
 <br></br>
 
@@ -355,3 +357,101 @@ func bucketSort(nums []float64) {
 ## 实现平均分配桶
 时间复杂度理论上可达到$O(n)$，关键在于将元素均匀分配到各个桶。为实现平均分配，可先设定大致分界线，将数据粗略分到3个桶。分配完毕后，再将元素较多的桶继续分为3个桶，直至所有桶中的元素数量大致相等。本质上是创建一棵递归树，让叶节点值尽可能平均。
 
+<br></br>
+
+
+
+# Counting Sort
+计数排序通过统计元素数量实现排序，常应用于整数数组。
+
+给定长为$n$的数组`nums`，其中元素都是非负整数，流程为：
+1. 遍历数组，找出最大数字，记为$m$。创建长为$m + 1$的辅助数组`counter`。
+2. 借助`counter`统计 `nums`中各数字的出现次数，其中`counter[num]`对应数字`num`出现次数。
+3. 由于`counter`各个索引天然有序，因此相当于所有数字已排序。遍历`counter`，根据各数字出现次数从小到大顺序填入`nums`即可。
+
+![](./Images/count_sort0.png)
+
+```go
+func countingSortNaive(nums []int) {
+    // 1. 统计数组最大元素 m
+    m := 0
+    for _, num := range nums {
+        if num > m {
+            m = num
+        }
+    }
+    // 2. 统计各数字的出现次数
+    counter := make([]int, m+1) // counter[num] 代表 num 的出现次数
+    for _, num := range nums {
+        counter[num]++
+    }
+    // 3. 遍历 counter ，将各元素填入原数组 nums
+    for i, num := 0, 0; num < m+1; num++ {
+        for j := 0; j < counter[num]; j++ {
+            nums[i] = num
+            i++
+        }
+    }
+}
+```
+
+<br>
+
+
+## 完整实现
+如果输入数据是对象，步骤`3.`会失效。为此，首先计算`counter`前缀和，即索引`i`处的前缀和，`prefix[i]`等于前`i`个元素和：
+
+$$
+\text{prefix}[i] = \sum_{j=0}^i \text{counter[j]}
+$$
+
+前缀和有明确的意义，`prefix[num] - 1`代表`num`在结果数组`res`最后一次出现的索引。它告诉我们各元素应出现在结果数组哪个位置。接下来，倒序遍历原数组`nums`每个元素`num`，在每轮迭代中执行以下两步：
+1. 将`num`填入`res`索引`prefix[num] - 1`处。
+2. 令前缀和`prefix[num]`减小1，从而得到下次放置`num`的索引。
+
+遍历完后，`res`是排序好的结果，最后使用`res`覆盖`nums`即可。
+
+![](./Images/count_sort1.png)
+![](./Images/count_sort2.png)
+![](./Images/count_sort3.png)
+![](./Images/count_sort4.png)
+![](./Images/count_sort5.png)
+![](./Images/count_sort6.png)
+
+```go
+func countingSort(nums []int) {
+    // 1. 统计数组最大元素 m
+    m := 0
+    for _, num := range nums {
+        if num > m {
+            m = num
+        }
+    }
+    // 2. 统计各数字的出现次数
+    counter := make([]int, m+1) // counter[num] 代表 num 的出现次数
+    for _, num := range nums {
+        counter[num]++
+    }
+    // 3. 求counter前缀和，将出现次数转为尾索引，即counter[num]-1是num在res中最后一次出现的索引
+    for i := 0; i < m; i++ {
+        counter[i+1] += counter[i]
+    }
+    // 4. 倒序遍历 nums ，将各元素填入结果数组 res
+    n := len(nums)
+    res := make([]int, n) // 初始化数组 res 用于记录结果
+    for i := n - 1; i >= 0; i-- {
+        num := nums[i]
+        res[counter[num]-1] = num // 将 num 放置到对应索引处
+        counter[num]-- // 令前缀和自减 1 ，得到下次放置 num 的索引
+    }
+    copy(nums, res) // 使用结果数组 res 覆盖原数组 nums
+}
+```
+
+- 时间复杂度$O(n + m)$、非自适应排序：涉及遍历`nums`和`counter`，都使用线性时间。一般情况下$n \gg m$，时间复杂度趋于$O(n)$。
+- 空间复杂度$O(n + m)$、非原地排序：借助长为$n$和$m$的数组`res`和`counter`。
+- 稳定排序：由于向`res`填充元素顺序是从右向左，因此倒序遍历`nums`可避免改变相等元素相对位置。实际上，正序遍历`nums`也可得到排序结果，但非稳定。
+
+局限性：
+- 计数排序只适用非负整数。若用于其他数据，需确保数据可转为非负整数，且在转换过程中不改变各元素间相对大小关系。
+- 计数排序适用于数据量大但数据范围较小的情况。如在上述示例中$m$不能太大，否则占用过多空间。而当$n \ll m$时，计数排序使用$O(m)$时间，可能比$O(n \log n)$慢。
